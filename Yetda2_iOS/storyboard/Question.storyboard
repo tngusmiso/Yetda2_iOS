@@ -69,24 +69,6 @@
             </objects>
             <point key="canvasLocation" x="1941" y="-169"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Sx5-5R-L1G">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jBd-Vl-R3B" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qiq-MN-FdL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gy1-IJ-kfc" kind="relationship" relationship="rootViewController" id="UR7-Fk-Esy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YO6-CS-3pC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-320" y="-169"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

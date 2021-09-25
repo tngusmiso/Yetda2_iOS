@@ -8,5 +8,5 @@
 import Foundation
 
 struct Strings {
-    
+    static let mainTitle = "선물 추천 받으러\n가볼까요?"
 }
