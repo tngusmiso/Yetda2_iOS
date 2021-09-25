@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question Sex View Controller-->
+        <scene sceneID="tvt-XC-aZR">
+            <objects>
+                <viewController storyboardIdentifier="QuestionSexViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gy1-IJ-kfc" customClass="QuestionSexViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6V-6D-oAU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bnm-Pr-xIS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E4e-Zz-u5n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KN8-SP-2Bm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="-169"/>
+        </scene>
+        <!--Question General View Controller-->
+        <scene sceneID="TPy-gk-ogO">
+            <objects>
+                <viewController storyboardIdentifier="QuestionGeneralViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7MR-aB-2Jm" customClass="QuestionGeneralViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WdO-uH-jCq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cp3-N8-8Fb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqY-DK-0X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="489"/>
+        </scene>
+        <!--Question Birthday View Controller-->
+        <scene sceneID="jl3-SL-cXk">
+            <objects>
+                <viewController storyboardIdentifier="QuestionBirthdayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nSj-8n-Zhe" customClass="QuestionBirthdayViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9oM-FZ-kYv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jwT-Aj-kzh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSl-yq-WkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="-169"/>
+        </scene>
+        <!--Question Money View Controller-->
+        <scene sceneID="247-bm-tgz">
+            <objects>
+                <viewController storyboardIdentifier="QuestionMoneyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z5O-ue-sqU" customClass="QuestionMoneyViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5B-Mc-wMa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PJ4-Fv-9KS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="-169"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sx5-5R-L1G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jBd-Vl-R3B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qiq-MN-FdL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gy1-IJ-kfc" kind="relationship" relationship="rootViewController" id="UR7-Fk-Esy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO6-CS-3pC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="-169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
