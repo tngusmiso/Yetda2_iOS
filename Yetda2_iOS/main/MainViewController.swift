@@ -27,8 +27,11 @@ class MainViewController: UIViewController {
     private func goToQuestionViewController() {
         let questionStoryboard = UIStoryboard(name: "Question", bundle: nil)
         let rootVC = questionStoryboard.instantiateViewController(identifier: "QuestionSexViewController")
+        
         let navigation = UINavigationController(rootViewController: rootVC)
         navigation.modalPresentationStyle = .fullScreen
+        navigation.navigationBar.standardAppearance = YetdaNavigationBar.appearance
+        
         self.present(navigation, animated: true, completion: nil)
     }
 }

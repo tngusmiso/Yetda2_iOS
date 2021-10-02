@@ -15,15 +15,15 @@ class QuestionSexViewController: UIViewController {
     }
     
     private func setupUI() {
-        guard let backButtonImage = UIImage(named: "backButton") else {
-            return
-        }
-        let backButtonItem = UIBarButtonItem(image: backButtonImage, style: .done, target: self, action: #selector(dismissVC))
-        backButtonItem.tintColor = .veryLightPink
-        self.navigationItem.leftBarButtonItem = backButtonItem
+        self.navigationItem.leftBarButtonItem = YetdaNavigationBar.backButton(target: self, action: #selector(dismissVC))
+        self.navigationItem.rightBarButtonItem = YetdaNavigationBar.skipButton(target: self, action: #selector(skipVC))
     }
     
     @objc private func dismissVC() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func skipVC() {
+        // skip
     }
 }
