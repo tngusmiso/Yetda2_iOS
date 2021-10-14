@@ -9,10 +9,8 @@ import UIKit
 
 class RoundSelectButton: UIButton {
     // MARK: - Properties
-    override var isSelected: Bool {
-        didSet { self.setNeedsLayout() }
-    }
-    
+    weak var group: RoundSelectGroup?
+
     var text: String = "" {
         didSet { self.setNeedsLayout() }
     }
@@ -33,14 +31,21 @@ class RoundSelectButton: UIButton {
     
     // MARK: - Layout
     override func layoutSubviews() {
+        if isSelected {
+            self.setSelectedUI()
+        } else {
+            self.setUnselectedUI()
+        }
+        
+        // text
+        setText()
+        
+        // color
         self.backgroundColor = .white253
         self.tintColor = .clear
         self.isHighlighted = false
         
-        if isSelected { setSelected() }
-        else { setUnselected() }
-        
-        setText()
+        // outlook
         self.frame.size = CGSize(width: self.size, height: self.size)
         self.layer.cornerRadius = self.size / CGFloat(2.0)
         
@@ -48,20 +53,31 @@ class RoundSelectButton: UIButton {
     }
     
     // MARK: - Methods
-    private func setSelected() {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        /* 터치했을 때 선택되는 버튼을 결정하는 로직
+         -> group.touch(_:) 함수 실행
+         -> group의 selectedButton 결정
+         -> selectedButton이 set 되면서, 변경전 버튼은 isSelected = false, 변경후 버튼은 isSelected = true 실행
+         -> isSelected에 따라 layout Update
+         */
+        self.group?.touched(self)
+    }
+    
+    private func setSelectedUI() {
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.pastelRed.cgColor
-        self.setTitleColor(.pastelRed, for: .selected)
     }
-    private func setUnselected() {
+    
+    private func setUnselectedUI() {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.paleLilac.cgColor
-        self.setTitleColor(.blueGrey, for: .normal)
     }
     
     private func setText() {
-        self.setTitle(self.text, for: .normal)
         self.titleLabel?.textAlignment = .center
         self.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: self.textSize)
+        self.setTitle(self.text, for: .normal)
+        self.setTitleColor(.blueGrey, for: .normal)
+        self.setTitleColor(.pastelRed, for: .selected)
     }
 }
