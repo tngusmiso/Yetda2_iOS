@@ -13,4 +13,5 @@ protocol QuestionViewController {
     func skipVC()
     func storeData()
     func storeDataAndNextVC()
+    func checkNextButtonEnable() -> Bool
 }

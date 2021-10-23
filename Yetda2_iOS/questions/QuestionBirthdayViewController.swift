@@ -12,12 +12,12 @@ class QuestionBirthdayViewController: UIViewController {
         .instantiateViewController(identifier: "QuestionMoneyViewController")
         as! QuestionMoneyViewController
     
-    private var monthInput: String = ""
-    private var dateInput: String = ""
+    private var month: String { monthTextField.text ?? "" }
+    private var date: String { dateTextField.text ?? "" }
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var monthTextField: UITextField!
-    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var monthTextField: NumericTextField!
+    @IBOutlet weak var dateTextField: NumericTextField!
     @IBOutlet weak var nextButton: HorizontalRoundButton!
     
     override func viewDidLoad() {
@@ -32,9 +32,12 @@ class QuestionBirthdayViewController: UIViewController {
         self.titleLabel.text = Strings.birthdayTitle
         
         self.monthTextField.delegate = self
+        self.monthTextField.setup(length: 2, min: 1, max: 12)
         self.dateTextField.delegate = self
+        self.dateTextField.setup(length: 2, min: 1, max: 31)
         
         self.nextButton.text = Strings.next
+        self.nextButton.isEnabled = checkNextButtonEnable()
         self.nextButton.addTarget(self, action: #selector(storeDataAndNextVC), for: .touchUpInside)
     }
     
@@ -44,6 +47,7 @@ class QuestionBirthdayViewController: UIViewController {
 }
 
 extension QuestionBirthdayViewController: QuestionViewController {
+    
     @objc func quitQuestionVC() {
         // 팝업
         self.navigationController?.popViewController(animated: true)
@@ -62,27 +66,40 @@ extension QuestionBirthdayViewController: QuestionViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
-}
-
-extension QuestionBirthdayViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // text: 원래 글자
-        // string: 추가될 글자
-        // Range: 추가될 문자열 범위(index, 몇칸)
-        
-        // 숫자 또는 backspace만 입력 가능
-        if string.isNumber == false && string.isEmpty == false {
-            return false
-        }
-        // 최대 두자리
-        guard let text = textField.text else { return true }
-        let newLength = text.count + string.count - range.length
-        return newLength <= 2
+    func checkNextButtonEnable() -> Bool {
+        self.month.isEmpty == false && self.date.isEmpty == false
     }
 }
 
-extension String {
-    var isNumber: Bool {
-        Int(self) != nil
+extension QuestionBirthdayViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // keypad 닫을 때 최소값 판별
+        if let numericTextField = textField as? NumericTextField {
+            if numericTextField.value < numericTextField.minValue {
+                numericTextField.value = numericTextField.minValue
+            }
+        }
+        // 다음버튼 활성화
+        self.nextButton.isEnabled = checkNextButtonEnable()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let numericTextField = textField as? NumericTextField else {
+            return true
+        }
+        if numericTextField == self.dateTextField {
+            switch self.monthTextField.value {
+            case 2:
+                numericTextField.setup(max: 29)
+            case 4,6,9,11:
+                numericTextField.setup(max: 30)
+            case 1,3,5,7,8,10,12:
+                numericTextField.setup(max: 31)
+            default:
+                break
+            }
+        }
+        numericTextField.input(value: string)
+        return false
     }
 }

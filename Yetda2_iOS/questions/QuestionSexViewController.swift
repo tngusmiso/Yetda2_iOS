@@ -36,6 +36,7 @@ class QuestionSexViewController: UIViewController {
         self.maleButton.text = Strings.male
         
         self.nextButton.text = Strings.next
+        self.nextButton.isEnabled = checkNextButtonEnable()
         self.nextButton.addTarget(self, action: #selector(storeDataAndNextVC), for: .touchUpInside)
     }
 }
@@ -58,5 +59,9 @@ extension QuestionSexViewController: QuestionViewController {
     @objc func storeDataAndNextVC() {
         self.storeData()
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func checkNextButtonEnable() -> Bool {
+        true
     }
 }
