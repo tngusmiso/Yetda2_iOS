@@ -20,6 +20,9 @@ class RoundSelectGroup {
     }
     
     func touched(_ button: RoundSelectButton) {
+        guard selectedButton != button else {
+            return
+        }
         selectedButton = button
     }
 }

@@ -15,10 +15,71 @@
                     <view key="view" contentMode="scaleToFill" id="n6V-6D-oAU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 성별은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-Xi-i1d">
+                                <rect key="frame" x="116.5" y="109" width="181" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-yN-OTf">
+                                <rect key="frame" x="96" y="173" width="222" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njq-DW-N1a" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="AR6-t5-xqg"/>
+                                            <constraint firstAttribute="width" secondItem="njq-DW-N1a" secondAttribute="height" multiplier="1:1" id="f0j-gO-qVT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-49-vzI" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fy4-49-vzI" secondAttribute="height" multiplier="1:1" id="9gv-jN-pHg"/>
+                                            <constraint firstAttribute="width" constant="100" id="WYD-mQ-xbc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="njq-DW-N1a" firstAttribute="leading" secondItem="wZt-yN-OTf" secondAttribute="leading" id="0fC-lc-LKu"/>
+                                    <constraint firstAttribute="bottom" secondItem="njq-DW-N1a" secondAttribute="bottom" id="AA4-qh-IMo"/>
+                                    <constraint firstItem="fy4-49-vzI" firstAttribute="leading" secondItem="njq-DW-N1a" secondAttribute="trailing" constant="22" id="Gch-W5-eLg"/>
+                                    <constraint firstAttribute="bottom" secondItem="fy4-49-vzI" secondAttribute="bottom" id="O59-kn-TWY"/>
+                                    <constraint firstItem="njq-DW-N1a" firstAttribute="top" secondItem="wZt-yN-OTf" secondAttribute="top" id="Q4m-dd-1ut"/>
+                                    <constraint firstItem="fy4-49-vzI" firstAttribute="top" secondItem="wZt-yN-OTf" secondAttribute="top" id="Taw-Yp-vlJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fy4-49-vzI" secondAttribute="trailing" id="n88-wf-9C7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-FU-hYl" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="26" y="778" width="362" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="bnE-Hr-ZE8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bnm-Pr-xIS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bnm-Pr-xIS" firstAttribute="trailing" secondItem="OSZ-FU-hYl" secondAttribute="trailing" constant="26" id="A2s-PA-LAG"/>
+                            <constraint firstItem="fv1-Xi-i1d" firstAttribute="top" secondItem="Bnm-Pr-xIS" secondAttribute="top" constant="65" id="Emn-ec-y0E"/>
+                            <constraint firstItem="fv1-Xi-i1d" firstAttribute="centerX" secondItem="Bnm-Pr-xIS" secondAttribute="centerX" id="V27-rT-cOH"/>
+                            <constraint firstItem="wZt-yN-OTf" firstAttribute="centerX" secondItem="n6V-6D-oAU" secondAttribute="centerX" id="Wi5-cw-tUv"/>
+                            <constraint firstItem="Bnm-Pr-xIS" firstAttribute="bottom" secondItem="OSZ-FU-hYl" secondAttribute="bottom" constant="32" id="YSM-AF-UjN"/>
+                            <constraint firstItem="OSZ-FU-hYl" firstAttribute="leading" secondItem="Bnm-Pr-xIS" secondAttribute="leading" constant="26" id="e3e-9x-kCs"/>
+                            <constraint firstItem="wZt-yN-OTf" firstAttribute="top" secondItem="fv1-Xi-i1d" secondAttribute="bottom" constant="40" id="yI7-wY-R04"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E4e-Zz-u5n"/>
+                    <connections>
+                        <outlet property="femaleButton" destination="njq-DW-N1a" id="66s-TF-gSR"/>
+                        <outlet property="maleButton" destination="fy4-49-vzI" id="MhD-Xt-R8i"/>
+                        <outlet property="nextButton" destination="OSZ-FU-hYl" id="O5t-qd-f5d"/>
+                        <outlet property="titleLabel" destination="fv1-Xi-i1d" id="r8l-3s-lxf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN8-SP-2Bm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,9 +107,61 @@
                     <view key="view" contentMode="scaleToFill" id="9oM-FZ-kYv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 생일이 언제인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iao-yk-qtR">
+                                <rect key="frame" x="70.5" y="104" width="273" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="AJK-cW-Zgo">
+                                <rect key="frame" x="111.5" y="161.5" width="85.5" height="50.5"/>
+                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYD-gS-djb">
+                                <rect key="frame" x="203" y="172" width="8.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-P0-Ohj" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="778" width="358" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ijt-6c-vPA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="NOu-0z-OC2">
+                                <rect key="frame" x="217.5" y="161.5" width="74.5" height="50.5"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jwT-Aj-kzh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kYD-gS-djb" firstAttribute="centerX" secondItem="Iao-yk-qtR" secondAttribute="centerX" id="Blf-h8-iCj"/>
+                            <constraint firstItem="Iao-yk-qtR" firstAttribute="centerX" secondItem="jwT-Aj-kzh" secondAttribute="centerX" id="C39-1z-iVr"/>
+                            <constraint firstItem="AJK-cW-Zgo" firstAttribute="centerY" secondItem="kYD-gS-djb" secondAttribute="centerY" id="D2f-L6-Oth"/>
+                            <constraint firstItem="NOu-0z-OC2" firstAttribute="leading" secondItem="kYD-gS-djb" secondAttribute="trailing" constant="6" id="DcG-Lv-bXe"/>
+                            <constraint firstItem="y2Z-P0-Ohj" firstAttribute="leading" secondItem="jwT-Aj-kzh" secondAttribute="leading" constant="28" id="KJe-zr-7sJ"/>
+                            <constraint firstItem="jwT-Aj-kzh" firstAttribute="trailing" secondItem="y2Z-P0-Ohj" secondAttribute="trailing" constant="28" id="RAJ-cx-WLn"/>
+                            <constraint firstItem="kYD-gS-djb" firstAttribute="leading" secondItem="AJK-cW-Zgo" secondAttribute="trailing" constant="6" id="Xcg-vJ-Mie"/>
+                            <constraint firstItem="Iao-yk-qtR" firstAttribute="top" secondItem="jwT-Aj-kzh" secondAttribute="top" constant="60" id="YL3-84-P2G"/>
+                            <constraint firstItem="kYD-gS-djb" firstAttribute="top" secondItem="Iao-yk-qtR" secondAttribute="bottom" constant="44" id="ac4-Sj-psn"/>
+                            <constraint firstItem="NOu-0z-OC2" firstAttribute="centerY" secondItem="kYD-gS-djb" secondAttribute="centerY" id="nc7-bo-VY6"/>
+                            <constraint firstItem="jwT-Aj-kzh" firstAttribute="bottom" secondItem="y2Z-P0-Ohj" secondAttribute="bottom" constant="32" id="nqd-RY-9WG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="NOu-0z-OC2" id="z5b-30-EVi"/>
+                        <outlet property="monthTextField" destination="AJK-cW-Zgo" id="a58-8w-U2b"/>
+                        <outlet property="nextButton" destination="y2Z-P0-Ohj" id="QOQ-Nu-VjX"/>
+                        <outlet property="titleLabel" destination="Iao-yk-qtR" id="2zR-h6-IaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSl-yq-WkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@ class RoundSelectButton: UIButton {
     // MARK: - Properties
     weak var group: RoundSelectGroup?
 
-    var text: String = "" {
+    var text: String = Strings.defaultButton {
         didSet { self.setNeedsLayout() }
     }
     
@@ -27,6 +27,7 @@ class RoundSelectButton: UIButton {
     // MARK: - Initializer
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.addTarget(self, action: #selector(touched), for: .touchUpInside)
     }
     
     // MARK: - Layout
@@ -53,13 +54,15 @@ class RoundSelectButton: UIButton {
     }
     
     // MARK: - Methods
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /* 터치했을 때 선택되는 버튼을 결정하는 로직
-         -> group.touch(_:) 함수 실행
-         -> group의 selectedButton 결정
-         -> selectedButton이 set 되면서, 변경전 버튼은 isSelected = false, 변경후 버튼은 isSelected = true 실행
-         -> isSelected에 따라 layout Update
-         */
+    
+    /* 터치했을 때 선택되는 버튼을 결정하는 로직
+     -> group.touch(_:) 함수 실행
+     -> group의 selectedButton 결정
+     -> selectedButton이 set 되면서, 변경전 버튼은 isSelected = false, 변경후 버튼은 isSelected = true 실행
+     -> isSelected에 따라 layout Update
+     */
+    
+    @IBAction private func touched() {
         self.group?.touched(self)
     }
     

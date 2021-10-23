@@ -13,7 +13,7 @@ class HorizontalRoundButton: UIButton {
         didSet { self.setNeedsLayout() }
     }
     
-    var text: String = "" {
+    var text: String = Strings.defaultButton {
         didSet { self.setNeedsLayout() }
     }
     
