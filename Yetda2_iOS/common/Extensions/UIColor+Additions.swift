@@ -2,7 +2,7 @@
 //  UIColor+Additions.swift
 //  Yetda_iOS
 //
-//  Generated on Zeplin. (2021. 10. 2.).
+//  Generated on Zeplin. (2021. 11. 25.).
 //  Copyright (c) 2021 __MyCompanyName__. All rights reserved.
 //
 
@@ -48,6 +48,10 @@ extension UIColor {
 
   @nonobjc class var veryLightPinkThree: UIColor {
     return UIColor(white: 201.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var veryLightPinkFour: UIColor {
+    return UIColor(white: 204.0 / 255.0, alpha: 1.0)
   }
 
 }

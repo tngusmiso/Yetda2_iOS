@@ -92,9 +92,87 @@
                     <view key="view" contentMode="scaleToFill" id="WdO-uH-jCq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분은 어떤 사람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikA-D3-oV8">
+                                <rect key="frame" x="98.5" y="104" width="217" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Der-JR-zr7">
+                                <rect key="frame" x="120" y="634" width="174" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtN-8X-2FT">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="UNI-4s-aWm"/>
+                                            <constraint firstAttribute="width" constant="70" id="WGo-eC-aga"/>
+                                        </constraints>
+                                        <state key="normal" image="reject"/>
+                                        <connections>
+                                            <action selector="touchRejectButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="0y5-hi-ZXM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-ZP-tXS">
+                                        <rect key="frame" x="104" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="JtI-ji-iWS"/>
+                                            <constraint firstAttribute="width" constant="70" id="u4v-fy-4X7"/>
+                                        </constraints>
+                                        <state key="normal" image="confirm"/>
+                                        <connections>
+                                            <action selector="touchConfirmButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="Ncj-VX-SI5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzm-Ne-FWu">
+                                <rect key="frame" x="166" y="748" width="82" height="30"/>
+                                <state key="normal" title="잘 모르겠어요"/>
+                                <connections>
+                                    <action selector="touchUnknownButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="8U7-V1-qCn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-9c-gOz">
+                                <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-Jv-YWr">
+                                        <rect key="frame" x="0.0" y="0.0" width="302" height="404.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="nfj-Jv-YWr" firstAttribute="leading" secondItem="2hX-9c-gOz" secondAttribute="leading" id="3Ot-Pr-cGB"/>
+                                    <constraint firstItem="nfj-Jv-YWr" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="top" id="JRT-V3-eWx"/>
+                                    <constraint firstAttribute="bottom" secondItem="nfj-Jv-YWr" secondAttribute="bottom" id="pfp-gW-jEW"/>
+                                    <constraint firstAttribute="trailing" secondItem="nfj-Jv-YWr" secondAttribute="trailing" id="tcU-cG-BtJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cp3-N8-8Fb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ikA-D3-oV8" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="12Z-QX-17q"/>
+                            <constraint firstItem="ikA-D3-oV8" firstAttribute="top" secondItem="cp3-N8-8Fb" secondAttribute="top" constant="60" id="Fzg-sr-lAx"/>
+                            <constraint firstItem="2hX-9c-gOz" firstAttribute="top" secondItem="ikA-D3-oV8" secondAttribute="bottom" constant="60" id="Nj1-Mo-us1"/>
+                            <constraint firstItem="Bzm-Ne-FWu" firstAttribute="top" secondItem="Der-JR-zr7" secondAttribute="bottom" constant="44" id="PUi-7U-gwi"/>
+                            <constraint firstItem="2hX-9c-gOz" firstAttribute="leading" secondItem="cp3-N8-8Fb" secondAttribute="leading" constant="56" id="VUV-tF-RJY"/>
+                            <constraint firstItem="Bzm-Ne-FWu" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="Wvd-ai-b2l"/>
+                            <constraint firstItem="2hX-9c-gOz" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="YIw-bY-evh"/>
+                            <constraint firstItem="cp3-N8-8Fb" firstAttribute="bottom" secondItem="Bzm-Ne-FWu" secondAttribute="bottom" constant="84" id="jLr-gA-GMj"/>
+                            <constraint firstItem="Der-JR-zr7" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="bottom" constant="45" id="ua6-yz-cYZ"/>
+                            <constraint firstItem="Der-JR-zr7" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="vio-nD-3sh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backCardView" destination="2hX-9c-gOz" id="eRE-jH-7Oj"/>
+                        <outlet property="confirmButton" destination="hPC-ZP-tXS" id="eBP-kf-EKG"/>
+                        <outlet property="currentCardView" destination="nfj-Jv-YWr" id="shv-u1-qv2"/>
+                        <outlet property="rejectButton" destination="KtN-8X-2FT" id="DLf-q5-4mW"/>
+                        <outlet property="titleLabel" destination="ikA-D3-oV8" id="RFa-rN-KNU"/>
+                        <outlet property="unknownButton" destination="Bzm-Ne-FWu" id="jUf-hT-I1S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqY-DK-0X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +248,6 @@
         <!--Question Money View Controller-->
         <scene sceneID="247-bm-tgz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuestionMoneyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z5O-ue-sqU" customClass="QuestionMoneyViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y5B-Mc-wMa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -243,11 +320,14 @@
                         <outlet property="titleLabel" destination="rHQ-Ps-4Ta" id="Mhy-Bu-acH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940.5797101449277" y="-169.41964285714286"/>
         </scene>
     </scenes>
     <resources>
+        <image name="confirm" width="70" height="70"/>
+        <image name="reject" width="70" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

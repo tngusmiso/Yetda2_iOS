@@ -30,6 +30,7 @@ class QuestionBirthdayViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = YetdaNavigationBar.skipButton(target: self, action: #selector(skipVC))
         
         self.titleLabel.text = Strings.birthdayTitle
+        self.titleLabel.textColor = .brownishGrey
         
         self.monthTextField.delegate = self
         self.monthTextField.setup(length: 2, min: 1, max: 12)
