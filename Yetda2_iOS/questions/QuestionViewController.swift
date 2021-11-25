@@ -7,7 +7,11 @@
 
 import Foundation
 
-
+/// - func quitQuestionVC()
+/// - func skipVC()
+/// - func storeData()
+/// - func storeDataAndNextVC()
+/// - func checkNextButtonEnable() -> Bool
 protocol QuestionViewController {
     func quitQuestionVC()
     func skipVC()

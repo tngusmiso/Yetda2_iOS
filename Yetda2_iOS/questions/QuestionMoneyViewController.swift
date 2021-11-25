@@ -8,22 +8,98 @@
 import UIKit
 
 class QuestionMoneyViewController: UIViewController {
+    let nextVC = UIStoryboard(name: "Question", bundle: nil)
+        .instantiateViewController(identifier: "QuestionGeneralViewController")
+        as! QuestionGeneralViewController
+    
+    var minPrice: Int { Int(minPriceTextField.text ?? "") ?? 0 }
+    var maxPrice: Int { Int(maxPriceTextField.text ?? "") ?? Int.max }
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var minPriceTextField: UITextField!
+    @IBOutlet weak var maxPriceTextField: UITextField!
+    @IBOutlet weak var nextButton: HorizontalRoundButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setup()
     }
     
-    private func setupUI() {
-        self.navigationItem.leftBarButtonItem = YetdaNavigationBar.backButton(target: self, action: #selector(popVC))
+    private func setup() {
+        self.navigationItem.leftBarButtonItem = YetdaNavigationBar.backButton(target: self, action: #selector(quitQuestionVC))
         self.navigationItem.rightBarButtonItem = YetdaNavigationBar.skipButton(target: self, action: #selector(skipVC))
+        
+        self.titleLabel.text = Strings.moneyTitle
+        self.titleLabel.textColor = .brownishGrey
+        
+        self.minPriceTextField.delegate = self
+        self.minPriceTextField.addTarget(self, action: #selector(textFieldEditingDidEnd(_:)), for: .editingDidEnd)
+        self.maxPriceTextField.delegate = self
+        self.maxPriceTextField.addTarget(self, action: #selector(textFieldEditingDidEnd(_:)), for: .editingDidEnd)
+        
+        self.nextButton.text = Strings.next
+        self.nextButton.isEnabled = checkNextButtonEnable()
+        self.nextButton.addTarget(self, action: #selector(storeDataAndNextVC), for: .touchUpInside)
     }
     
-    @objc private func popVC() {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @objc func textFieldEditingDidEnd(_ sender: UITextField) {
+        
+    }
+}
+
+extension QuestionMoneyViewController: QuestionViewController {
+    @objc func quitQuestionVC() {
+        // 팝업
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc private func skipVC() {
-        // skip
+    @objc func skipVC() {
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func storeData() {
+        // 최소 최대 금액 저장
+    }
+    
+    @objc func storeDataAndNextVC() {
+        self.storeData()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func checkNextButtonEnable() -> Bool {
+        minPrice <= maxPrice
+    }
+}
+
+extension QuestionMoneyViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case self.minPriceTextField:
+            if minPrice > maxPrice {
+                self.minPriceTextField.text = "\(maxPrice)"
+            }
+        case self.maxPriceTextField:
+            if minPrice > maxPrice {
+                self.maxPriceTextField.text = "\(minPrice)"
+            }
+        default:
+            break
+        }
+        self.nextButton.isEnabled = checkNextButtonEnable()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        textField.invalidateIntrinsicContentSize()
+        
+        // backspace 또는 숫자만 입력가능
+        if string.isEmpty || Int(string) != nil {
+            return true
+        }
+        
+        return false
     }
 }

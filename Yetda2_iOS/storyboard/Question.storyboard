@@ -19,7 +19,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 성별은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-Xi-i1d">
                                 <rect key="frame" x="116.5" y="109" width="181" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-yN-OTf">
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqY-DK-0X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="489"/>
+            <point key="canvasLocation" x="495.6521739130435" y="488.83928571428567"/>
         </scene>
         <!--Question Birthday View Controller-->
         <scene sceneID="jl3-SL-cXk">
@@ -110,8 +110,8 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 생일이 언제인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iao-yk-qtR">
                                 <rect key="frame" x="70.5" y="104" width="273" height="24"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="AJK-cW-Zgo" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
@@ -170,17 +170,81 @@
         <!--Question Money View Controller-->
         <scene sceneID="247-bm-tgz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuestionMoneyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z5O-ue-sqU" customClass="QuestionMoneyViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y5B-Mc-wMa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얼마 정도 생각하시나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHQ-Ps-4Ta">
+                                <rect key="frame" x="110.5" y="104" width="193" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-px-boS" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="778" width="358" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="4ow-Bv-325"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="lZ6-YD-YcG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOW-Ym-eQ4">
+                                <rect key="frame" x="80" y="276.5" width="149" height="50.5"/>
+                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 부터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-iP-e32">
+                                <rect key="frame" x="237" y="281" width="127" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-mQ-pg8">
+                                <rect key="frame" x="237" y="362" width="127" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdx-rK-39J">
+                                <rect key="frame" x="80" y="357" width="149" height="51"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PJ4-Fv-9KS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="trailing" secondItem="g3d-iP-e32" secondAttribute="trailing" id="3By-aX-57X"/>
+                            <constraint firstItem="wOW-Ym-eQ4" firstAttribute="leading" secondItem="PJ4-Fv-9KS" secondAttribute="leading" constant="80" id="9Ri-se-ecR"/>
+                            <constraint firstItem="rHQ-Ps-4Ta" firstAttribute="centerX" secondItem="PJ4-Fv-9KS" secondAttribute="centerX" id="MqC-XM-iCL"/>
+                            <constraint firstAttribute="trailing" secondItem="g3d-iP-e32" secondAttribute="trailing" constant="50" id="SGs-wx-r5a"/>
+                            <constraint firstItem="PJ4-Fv-9KS" firstAttribute="bottom" secondItem="fR8-px-boS" secondAttribute="bottom" constant="32" id="WrG-4A-dTc"/>
+                            <constraint firstAttribute="bottom" secondItem="g3d-iP-e32" secondAttribute="bottom" constant="574" id="Xyh-Fv-5OO"/>
+                            <constraint firstItem="Mdx-rK-39J" firstAttribute="leading" secondItem="wOW-Ym-eQ4" secondAttribute="leading" id="a04-D4-AkR"/>
+                            <constraint firstItem="fR8-px-boS" firstAttribute="leading" secondItem="PJ4-Fv-9KS" secondAttribute="leading" constant="28" id="dOA-CN-uhl"/>
+                            <constraint firstItem="Mdx-rK-39J" firstAttribute="trailing" secondItem="wOW-Ym-eQ4" secondAttribute="trailing" id="ddg-S0-Djw"/>
+                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="top" secondItem="g3d-iP-e32" secondAttribute="bottom" constant="40" id="f9n-gj-KOg"/>
+                            <constraint firstItem="Mdx-rK-39J" firstAttribute="centerY" secondItem="4cT-mQ-pg8" secondAttribute="centerY" id="kKf-eE-SI2"/>
+                            <constraint firstItem="PJ4-Fv-9KS" firstAttribute="trailing" secondItem="fR8-px-boS" secondAttribute="trailing" constant="28" id="mKR-Li-FrH"/>
+                            <constraint firstItem="g3d-iP-e32" firstAttribute="leading" secondItem="wOW-Ym-eQ4" secondAttribute="trailing" constant="8" id="rPL-Ma-AM2"/>
+                            <constraint firstItem="rHQ-Ps-4Ta" firstAttribute="top" secondItem="PJ4-Fv-9KS" secondAttribute="top" constant="60" id="swY-ia-qwa"/>
+                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="leading" secondItem="g3d-iP-e32" secondAttribute="leading" id="uH4-Ei-qDb"/>
+                            <constraint firstItem="wOW-Ym-eQ4" firstAttribute="centerY" secondItem="g3d-iP-e32" secondAttribute="centerY" id="zYH-Nx-GzF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="maxPriceTextField" destination="Mdx-rK-39J" id="rZb-xT-YYL"/>
+                        <outlet property="minPriceTextField" destination="wOW-Ym-eQ4" id="fXN-vf-1id"/>
+                        <outlet property="nextButton" destination="fR8-px-boS" id="N4k-Cg-noB"/>
+                        <outlet property="titleLabel" destination="rHQ-Ps-4Ta" id="Mhy-Bu-acH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="-169"/>
+            <point key="canvasLocation" x="1940.5797101449277" y="-169.41964285714286"/>
         </scene>
     </scenes>
     <resources>
