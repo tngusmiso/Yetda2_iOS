@@ -99,6 +99,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-9c-gOz" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-Jv-YWr" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Der-JR-zr7">
                                 <rect key="frame" x="120" y="634" width="174" height="70"/>
                                 <subviews>
@@ -133,40 +141,27 @@
                                     <action selector="touchUnknownButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="8U7-V1-qCn"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-9c-gOz">
-                                <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-Jv-YWr">
-                                        <rect key="frame" x="0.0" y="0.0" width="302" height="404.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="nfj-Jv-YWr" firstAttribute="leading" secondItem="2hX-9c-gOz" secondAttribute="leading" id="3Ot-Pr-cGB"/>
-                                    <constraint firstItem="nfj-Jv-YWr" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="top" id="JRT-V3-eWx"/>
-                                    <constraint firstAttribute="bottom" secondItem="nfj-Jv-YWr" secondAttribute="bottom" id="pfp-gW-jEW"/>
-                                    <constraint firstAttribute="trailing" secondItem="nfj-Jv-YWr" secondAttribute="trailing" id="tcU-cG-BtJ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cp3-N8-8Fb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ikA-D3-oV8" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="12Z-QX-17q"/>
+                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="top" id="8gX-SA-zbw"/>
                             <constraint firstItem="ikA-D3-oV8" firstAttribute="top" secondItem="cp3-N8-8Fb" secondAttribute="top" constant="60" id="Fzg-sr-lAx"/>
+                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="bottom" secondItem="2hX-9c-gOz" secondAttribute="bottom" id="JUa-MZ-gQQ"/>
                             <constraint firstItem="2hX-9c-gOz" firstAttribute="top" secondItem="ikA-D3-oV8" secondAttribute="bottom" constant="60" id="Nj1-Mo-us1"/>
                             <constraint firstItem="Bzm-Ne-FWu" firstAttribute="top" secondItem="Der-JR-zr7" secondAttribute="bottom" constant="44" id="PUi-7U-gwi"/>
                             <constraint firstItem="2hX-9c-gOz" firstAttribute="leading" secondItem="cp3-N8-8Fb" secondAttribute="leading" constant="56" id="VUV-tF-RJY"/>
                             <constraint firstItem="Bzm-Ne-FWu" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="Wvd-ai-b2l"/>
                             <constraint firstItem="2hX-9c-gOz" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="YIw-bY-evh"/>
+                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="trailing" secondItem="2hX-9c-gOz" secondAttribute="trailing" id="aGP-Ty-sth"/>
                             <constraint firstItem="cp3-N8-8Fb" firstAttribute="bottom" secondItem="Bzm-Ne-FWu" secondAttribute="bottom" constant="84" id="jLr-gA-GMj"/>
+                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="leading" secondItem="2hX-9c-gOz" secondAttribute="leading" id="q6J-4q-ZMu"/>
                             <constraint firstItem="Der-JR-zr7" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="bottom" constant="45" id="ua6-yz-cYZ"/>
                             <constraint firstItem="Der-JR-zr7" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="vio-nD-3sh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backCardView" destination="2hX-9c-gOz" id="eRE-jH-7Oj"/>
                         <outlet property="confirmButton" destination="hPC-ZP-tXS" id="eBP-kf-EKG"/>
                         <outlet property="currentCardView" destination="nfj-Jv-YWr" id="shv-u1-qv2"/>
                         <outlet property="rejectButton" destination="KtN-8X-2FT" id="DLf-q5-4mW"/>
@@ -285,7 +280,7 @@
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdx-rK-39J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdx-rK-39J">
                                 <rect key="frame" x="80" y="357" width="149" height="51"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>

@@ -8,12 +8,8 @@
 import UIKit
 
 class QuestionGeneralViewController: UIViewController {
-
     @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var backCardView: UIView!
-    @IBOutlet weak var currentCardView: UIView!
-    
+    @IBOutlet weak var currentCardView: QuestionCardView!    
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var unknownButton: UIButton!
@@ -24,10 +20,13 @@ class QuestionGeneralViewController: UIViewController {
     }
     
     @IBAction func touchRejectButton(_ sender: Any) {
+        currentCardView.moveLeft()
     }
     @IBAction func touchConfirmButton(_ sender: Any) {
+        currentCardView.moveRight()
     }
     @IBAction func touchUnknownButton(_ sender: Any) {
+        currentCardView.moveUp()
     }
     
     private func setupUI() {
@@ -35,16 +34,6 @@ class QuestionGeneralViewController: UIViewController {
         
         self.titleLabel.text = Strings.questionTitle
         self.titleLabel.textColor = .brownishGrey
-        
-        self.backCardView.layer.cornerRadius = 14
-        self.backCardView.layer.shadowRadius = 20
-        self.backCardView.layer.shadowOpacity = 0.1
-        self.backCardView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        
-        self.currentCardView.layer.cornerRadius = 14
-        self.currentCardView.layer.shadowRadius = 20
-        self.currentCardView.layer.shadowOpacity = 0.1
-        self.currentCardView.layer.shadowOffset = CGSize(width: 0, height: 4)
 
         // set image for selected state
         
