@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AAA2759116D0085B9B7 /* AppDelegate.swift */; };
+		3A466AAD2759116D0085B9B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AAC2759116D0085B9B7 /* SceneDelegate.swift */; };
+		3A466AB22759116D0085B9B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB02759116D0085B9B7 /* Main.storyboard */; };
+		3A466AB42759116F0085B9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB32759116F0085B9B7 /* Assets.xcassets */; };
+		3A466AB72759116F0085B9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB52759116F0085B9B7 /* LaunchScreen.storyboard */; };
+		3A466ACA2759123B0085B9B7 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AC92759123B0085B9B7 /* Gift.swift */; };
+		3A466ACF275912AC0085B9B7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ACE275912AC0085B9B7 /* Realm */; };
+		3A466AD1275912AC0085B9B7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD0275912AC0085B9B7 /* RealmSwift */; };
+		3A466AD52759139D0085B9B7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD42759139D0085B9B7 /* FirebaseFirestore */; };
+		3A466AD72759139D0085B9B7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD62759139D0085B9B7 /* FirebaseDatabase */; };
+		3A466AD92759139D0085B9B7 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD82759139D0085B9B7 /* FirebaseFirestoreSwift-Beta */; };
+		3A466ADB2759139D0085B9B7 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADA2759139D0085B9B7 /* FirebaseStorageSwift-Beta */; };
+		3A466ADD2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADC2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta */; };
+		3A466ADF2759139D0085B9B7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADE2759139D0085B9B7 /* FirebaseStorage */; };
+		3A466AE2275913A80085B9B7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE1275913A80085B9B7 /* Question.swift */; };
+		3A466AE5275913B60085B9B7 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE4275913B60085B9B7 /* Update.swift */; };
+		3A466AEB275913EA0085B9B7 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */; };
+		3A466AEE275914020085B9B7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AED275914020085B9B7 /* Strings.swift */; };
+		3A466AF2275914320085B9B7 /* HorizontalRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AF1275914320085B9B7 /* HorizontalRoundButton.swift */; };
+		3A466AF5275914410085B9B7 /* NumericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AF4275914410085B9B7 /* NumericTextField.swift */; };
+		3A466AF8275914520085B9B7 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AF7275914520085B9B7 /* QuestionCardView.swift */; };
+		3A466AFC275914860085B9B7 /* RoundSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AFB275914860085B9B7 /* RoundSelectButton.swift */; };
+		3A466AFF2759149E0085B9B7 /* RoundSelectGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AFE2759149E0085B9B7 /* RoundSelectGroup.swift */; };
+		3A466B02275914B20085B9B7 /* YetdaNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B01275914B20085B9B7 /* YetdaNavigationBar.swift */; };
+		3A466B06275914F80085B9B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B05275914F80085B9B7 /* MainViewController.swift */; };
+		3A466B09275915140085B9B7 /* QuestionBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B08275915140085B9B7 /* QuestionBirthdayViewController.swift */; };
+		3A466B0C2759151D0085B9B7 /* QuestionGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B0B2759151D0085B9B7 /* QuestionGeneralViewController.swift */; };
+		3A466B0F275915250085B9B7 /* QuestionMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B0E275915250085B9B7 /* QuestionMoneyViewController.swift */; };
+		3A466B122759152C0085B9B7 /* QuestionSexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B112759152C0085B9B7 /* QuestionSexViewController.swift */; };
+		3A466B15275915370085B9B7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B14275915370085B9B7 /* QuestionViewController.swift */; };
+		3A466B18275915840085B9B7 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B17275915840085B9B7 /* RecommendViewController.swift */; };
+		3A466B1C275915C90085B9B7 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466B1B275915C90085B9B7 /* Question.storyboard */; };
+		3A466B1F275915D30085B9B7 /* Recommend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466B1E275915D30085B9B7 /* Recommend.storyboard */; };
+		3A466B23275919AC0085B9B7 /* AnswerResetAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B22275919AC0085B9B7 /* AnswerResetAlertView.swift */; };
+		3A466B27275919B70085B9B7 /* AnswerResetAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A466B26275919B70085B9B7 /* AnswerResetAlertView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A466AA72759116D0085B9B7 /* Yetda2_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda2_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A466AAA2759116D0085B9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A466AAC2759116D0085B9B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A466AB12759116D0085B9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A466AB32759116F0085B9B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A466AB62759116F0085B9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A466AB82759116F0085B9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A466AC92759123B0085B9B7 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		3A466AE1275913A80085B9B7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3A466AE4275913B60085B9B7 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		3A466AED275914020085B9B7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		3A466AF1275914320085B9B7 /* HorizontalRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRoundButton.swift; sourceTree = "<group>"; };
+		3A466AF4275914410085B9B7 /* NumericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextField.swift; sourceTree = "<group>"; };
+		3A466AF7275914520085B9B7 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		3A466AFB275914860085B9B7 /* RoundSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSelectButton.swift; sourceTree = "<group>"; };
+		3A466AFE2759149E0085B9B7 /* RoundSelectGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSelectGroup.swift; sourceTree = "<group>"; };
+		3A466B01275914B20085B9B7 /* YetdaNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetdaNavigationBar.swift; sourceTree = "<group>"; };
+		3A466B05275914F80085B9B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3A466B08275915140085B9B7 /* QuestionBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBirthdayViewController.swift; sourceTree = "<group>"; };
+		3A466B0B2759151D0085B9B7 /* QuestionGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGeneralViewController.swift; sourceTree = "<group>"; };
+		3A466B0E275915250085B9B7 /* QuestionMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMoneyViewController.swift; sourceTree = "<group>"; };
+		3A466B112759152C0085B9B7 /* QuestionSexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSexViewController.swift; sourceTree = "<group>"; };
+		3A466B14275915370085B9B7 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		3A466B17275915840085B9B7 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		3A466B1B275915C90085B9B7 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		3A466B1E275915D30085B9B7 /* Recommend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommend.storyboard; sourceTree = "<group>"; };
+		3A466B22275919AC0085B9B7 /* AnswerResetAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerResetAlertView.swift; sourceTree = "<group>"; };
+		3A466B26275919B70085B9B7 /* AnswerResetAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerResetAlertView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A466AA42759116D0085B9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A466AD1275912AC0085B9B7 /* RealmSwift in Frameworks */,
+				3A466ACF275912AC0085B9B7 /* Realm in Frameworks */,
+				3A466AD92759139D0085B9B7 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				3A466AD72759139D0085B9B7 /* FirebaseDatabase in Frameworks */,
+				3A466AD52759139D0085B9B7 /* FirebaseFirestore in Frameworks */,
+				3A466ADF2759139D0085B9B7 /* FirebaseStorage in Frameworks */,
+				3A466ADD2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				3A466ADB2759139D0085B9B7 /* FirebaseStorageSwift-Beta in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A466A9E2759116D0085B9B7 = {
+			isa = PBXGroup;
+			children = (
+				3A466AA92759116D0085B9B7 /* Yetda2_iOS */,
+				3A466AA82759116D0085B9B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A466AA82759116D0085B9B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AA72759116D0085B9B7 /* Yetda2_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A466AA92759116D0085B9B7 /* Yetda2_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AAA2759116D0085B9B7 /* AppDelegate.swift */,
+				3A466AAC2759116D0085B9B7 /* SceneDelegate.swift */,
+				3A466AB32759116F0085B9B7 /* Assets.xcassets */,
+				3A466AB82759116F0085B9B7 /* Info.plist */,
+				3A466AC8275912130085B9B7 /* model */,
+				3A466AC3275911B20085B9B7 /* common */,
+				3A466AC0275911900085B9B7 /* main */,
+				3A466AC1275911990085B9B7 /* question */,
+				3A466AC2275911A40085B9B7 /* recommend */,
+				3A466ABF2759117B0085B9B7 /* storyboard */,
+			);
+			path = Yetda2_iOS;
+			sourceTree = "<group>";
+		};
+		3A466ABF2759117B0085B9B7 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AB02759116D0085B9B7 /* Main.storyboard */,
+				3A466AB52759116F0085B9B7 /* LaunchScreen.storyboard */,
+				3A466B1B275915C90085B9B7 /* Question.storyboard */,
+				3A466B1E275915D30085B9B7 /* Recommend.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		3A466AC0275911900085B9B7 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3A466B05275914F80085B9B7 /* MainViewController.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3A466AC1275911990085B9B7 /* question */ = {
+			isa = PBXGroup;
+			children = (
+				3A466B14275915370085B9B7 /* QuestionViewController.swift */,
+				3A466B08275915140085B9B7 /* QuestionBirthdayViewController.swift */,
+				3A466B112759152C0085B9B7 /* QuestionSexViewController.swift */,
+				3A466B0E275915250085B9B7 /* QuestionMoneyViewController.swift */,
+				3A466B0B2759151D0085B9B7 /* QuestionGeneralViewController.swift */,
+			);
+			path = question;
+			sourceTree = "<group>";
+		};
+		3A466AC2275911A40085B9B7 /* recommend */ = {
+			isa = PBXGroup;
+			children = (
+				3A466B17275915840085B9B7 /* RecommendViewController.swift */,
+			);
+			path = recommend;
+			sourceTree = "<group>";
+		};
+		3A466AC3275911B20085B9B7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AF0275914230085B9B7 /* views */,
+				3A466AE7275913CD0085B9B7 /* extensions */,
+				3A466AED275914020085B9B7 /* Strings.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		3A466AC8275912130085B9B7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AC92759123B0085B9B7 /* Gift.swift */,
+				3A466AE1275913A80085B9B7 /* Question.swift */,
+				3A466AE4275913B60085B9B7 /* Update.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3A466AE7275913CD0085B9B7 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		3A466AF0275914230085B9B7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3A466B212759197C0085B9B7 /* AnswerResetAlertView */,
+				3A466AFA275914670085B9B7 /* RoundSelectButton */,
+				3A466AF1275914320085B9B7 /* HorizontalRoundButton.swift */,
+				3A466AF4275914410085B9B7 /* NumericTextField.swift */,
+				3A466AF7275914520085B9B7 /* QuestionCardView.swift */,
+				3A466B01275914B20085B9B7 /* YetdaNavigationBar.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3A466AFA275914670085B9B7 /* RoundSelectButton */ = {
+			isa = PBXGroup;
+			children = (
+				3A466AFB275914860085B9B7 /* RoundSelectButton.swift */,
+				3A466AFE2759149E0085B9B7 /* RoundSelectGroup.swift */,
+			);
+			path = RoundSelectButton;
+			sourceTree = "<group>";
+		};
+		3A466B212759197C0085B9B7 /* AnswerResetAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				3A466B22275919AC0085B9B7 /* AnswerResetAlertView.swift */,
+				3A466B26275919B70085B9B7 /* AnswerResetAlertView.xib */,
+			);
+			path = AnswerResetAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A466AA62759116D0085B9B7 /* Yetda2_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A466ABB2759116F0085B9B7 /* Build configuration list for PBXNativeTarget "Yetda2_iOS" */;
+			buildPhases = (
+				3A466AA32759116D0085B9B7 /* Sources */,
+				3A466AA42759116D0085B9B7 /* Frameworks */,
+				3A466AA52759116D0085B9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yetda2_iOS;
+			packageProductDependencies = (
+				3A466ACE275912AC0085B9B7 /* Realm */,
+				3A466AD0275912AC0085B9B7 /* RealmSwift */,
+				3A466AD42759139D0085B9B7 /* FirebaseFirestore */,
+				3A466AD62759139D0085B9B7 /* FirebaseDatabase */,
+				3A466AD82759139D0085B9B7 /* FirebaseFirestoreSwift-Beta */,
+				3A466ADA2759139D0085B9B7 /* FirebaseStorageSwift-Beta */,
+				3A466ADC2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta */,
+				3A466ADE2759139D0085B9B7 /* FirebaseStorage */,
+			);
+			productName = Yetda2_iOS;
+			productReference = 3A466AA72759116D0085B9B7 /* Yetda2_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A466A9F2759116D0085B9B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3A466AA62759116D0085B9B7 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 3A466AA22759116D0085B9B7 /* Build configuration list for PBXProject "Yetda2_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A466A9E2759116D0085B9B7;
+			packageReferences = (
+				3A466ACD275912AC0085B9B7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 3A466AA82759116D0085B9B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A466AA62759116D0085B9B7 /* Yetda2_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A466AA52759116D0085B9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A466AB72759116F0085B9B7 /* LaunchScreen.storyboard in Resources */,
+				3A466B27275919B70085B9B7 /* AnswerResetAlertView.xib in Resources */,
+				3A466B1F275915D30085B9B7 /* Recommend.storyboard in Resources */,
+				3A466AB42759116F0085B9B7 /* Assets.xcassets in Resources */,
+				3A466B1C275915C90085B9B7 /* Question.storyboard in Resources */,
+				3A466AB22759116D0085B9B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A466AA32759116D0085B9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A466B15275915370085B9B7 /* QuestionViewController.swift in Sources */,
+				3A466ACA2759123B0085B9B7 /* Gift.swift in Sources */,
+				3A466AE2275913A80085B9B7 /* Question.swift in Sources */,
+				3A466B0F275915250085B9B7 /* QuestionMoneyViewController.swift in Sources */,
+				3A466AE5275913B60085B9B7 /* Update.swift in Sources */,
+				3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */,
+				3A466B23275919AC0085B9B7 /* AnswerResetAlertView.swift in Sources */,
+				3A466AF8275914520085B9B7 /* QuestionCardView.swift in Sources */,
+				3A466AF2275914320085B9B7 /* HorizontalRoundButton.swift in Sources */,
+				3A466AFF2759149E0085B9B7 /* RoundSelectGroup.swift in Sources */,
+				3A466B18275915840085B9B7 /* RecommendViewController.swift in Sources */,
+				3A466B06275914F80085B9B7 /* MainViewController.swift in Sources */,
+				3A466AFC275914860085B9B7 /* RoundSelectButton.swift in Sources */,
+				3A466AF5275914410085B9B7 /* NumericTextField.swift in Sources */,
+				3A466AAD2759116D0085B9B7 /* SceneDelegate.swift in Sources */,
+				3A466B0C2759151D0085B9B7 /* QuestionGeneralViewController.swift in Sources */,
+				3A466B122759152C0085B9B7 /* QuestionSexViewController.swift in Sources */,
+				3A466AEB275913EA0085B9B7 /* UIColor+Additions.swift in Sources */,
+				3A466B02275914B20085B9B7 /* YetdaNavigationBar.swift in Sources */,
+				3A466AEE275914020085B9B7 /* Strings.swift in Sources */,
+				3A466B09275915140085B9B7 /* QuestionBirthdayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A466AB02759116D0085B9B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A466AB12759116D0085B9B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A466AB52759116F0085B9B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A466AB62759116F0085B9B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A466AB92759116F0085B9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A466ABA2759116F0085B9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A466ABC2759116F0085B9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFQJNQ37T;
+				INFOPLIST_FILE = Yetda2_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.upf2021.Yetda2-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A466ABD2759116F0085B9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFQJNQ37T;
+				INFOPLIST_FILE = Yetda2_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.upf2021.Yetda2-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A466AA22759116D0085B9B7 /* Build configuration list for PBXProject "Yetda2_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A466AB92759116F0085B9B7 /* Debug */,
+				3A466ABA2759116F0085B9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A466ABB2759116F0085B9B7 /* Build configuration list for PBXNativeTarget "Yetda2_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A466ABC2759116F0085B9B7 /* Debug */,
+				3A466ABD2759116F0085B9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A466ACD275912AC0085B9B7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+		3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A466ACE275912AC0085B9B7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466ACD275912AC0085B9B7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		3A466AD0275912AC0085B9B7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466ACD275912AC0085B9B7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		3A466AD42759139D0085B9B7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3A466AD62759139D0085B9B7 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3A466AD82759139D0085B9B7 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		3A466ADA2759139D0085B9B7 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		3A466ADC2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		3A466ADE2759139D0085B9B7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A466AD32759139D0085B9B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3A466A9F2759116D0085B9B7 /* Project object */;
+}

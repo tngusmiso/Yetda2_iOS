@@ -9,7 +9,7 @@ import UIKit
 
 class QuestionGeneralViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var currentCardView: QuestionCardView!    
+    @IBOutlet weak var currentCardView: QuestionCardView!
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var unknownButton: UIButton!

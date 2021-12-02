@@ -9,17 +9,17 @@
     </dependencies>
     <scenes>
         <!--Recommend View Controller-->
-        <scene sceneID="fDr-wq-OVZ">
+        <scene sceneID="594-FO-VtP">
             <objects>
-                <viewController storyboardIdentifier="RecommendViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8CZ-xS-9ZE" customClass="RecommendViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CAm-U1-0ID">
+                <viewController storyboardIdentifier="RecommendViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dji-KW-Ikq" customClass="RecommendViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ez-mR-ORZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dhD-RZ-cPj"/>
+                        <viewLayoutGuide key="safeArea" id="jNj-63-Ndk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bz-Io-eYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaV-ke-TZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74" y="186"/>
         </scene>

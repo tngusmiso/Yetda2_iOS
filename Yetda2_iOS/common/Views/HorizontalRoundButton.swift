@@ -59,3 +59,4 @@ class HorizontalRoundButton: UIButton {
         self.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: self.textSize)
     }
 }
+

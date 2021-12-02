@@ -9,313 +9,313 @@
     </dependencies>
     <scenes>
         <!--Question Sex View Controller-->
-        <scene sceneID="tvt-XC-aZR">
+        <scene sceneID="Ps6-pw-hI8">
             <objects>
-                <viewController storyboardIdentifier="QuestionSexViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gy1-IJ-kfc" customClass="QuestionSexViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n6V-6D-oAU">
+                <viewController storyboardIdentifier="QuestionSexViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rJY-1i-CLm" customClass="QuestionSexViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBN-RC-fj1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 성별은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-Xi-i1d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 성별은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-xl-9vP">
                                 <rect key="frame" x="116.5" y="109" width="181" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-yN-OTf">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-ME-HIv">
                                 <rect key="frame" x="96" y="173" width="222" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njq-DW-N1a" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-WX-H3C" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="AR6-t5-xqg"/>
-                                            <constraint firstAttribute="width" secondItem="njq-DW-N1a" secondAttribute="height" multiplier="1:1" id="f0j-gO-qVT"/>
+                                            <constraint firstAttribute="width" constant="100" id="BPE-mn-gYr"/>
+                                            <constraint firstAttribute="width" secondItem="D5R-WX-H3C" secondAttribute="height" multiplier="1:1" id="sHz-jD-E2h"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-49-vzI" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr2-gh-y72" customClass="RoundSelectButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                         <rect key="frame" x="122" y="0.0" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="fy4-49-vzI" secondAttribute="height" multiplier="1:1" id="9gv-jN-pHg"/>
-                                            <constraint firstAttribute="width" constant="100" id="WYD-mQ-xbc"/>
+                                            <constraint firstAttribute="width" secondItem="zr2-gh-y72" secondAttribute="height" multiplier="1:1" id="Toq-zc-UkM"/>
+                                            <constraint firstAttribute="width" constant="100" id="qRf-WB-j1f"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="njq-DW-N1a" firstAttribute="leading" secondItem="wZt-yN-OTf" secondAttribute="leading" id="0fC-lc-LKu"/>
-                                    <constraint firstAttribute="bottom" secondItem="njq-DW-N1a" secondAttribute="bottom" id="AA4-qh-IMo"/>
-                                    <constraint firstItem="fy4-49-vzI" firstAttribute="leading" secondItem="njq-DW-N1a" secondAttribute="trailing" constant="22" id="Gch-W5-eLg"/>
-                                    <constraint firstAttribute="bottom" secondItem="fy4-49-vzI" secondAttribute="bottom" id="O59-kn-TWY"/>
-                                    <constraint firstItem="njq-DW-N1a" firstAttribute="top" secondItem="wZt-yN-OTf" secondAttribute="top" id="Q4m-dd-1ut"/>
-                                    <constraint firstItem="fy4-49-vzI" firstAttribute="top" secondItem="wZt-yN-OTf" secondAttribute="top" id="Taw-Yp-vlJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="fy4-49-vzI" secondAttribute="trailing" id="n88-wf-9C7"/>
+                                    <constraint firstAttribute="bottom" secondItem="zr2-gh-y72" secondAttribute="bottom" id="0dD-P3-h3D"/>
+                                    <constraint firstItem="zr2-gh-y72" firstAttribute="leading" secondItem="D5R-WX-H3C" secondAttribute="trailing" constant="22" id="3A1-bL-9sY"/>
+                                    <constraint firstItem="D5R-WX-H3C" firstAttribute="top" secondItem="Gjy-ME-HIv" secondAttribute="top" id="9Lv-me-TwJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zr2-gh-y72" secondAttribute="trailing" id="AMO-di-Xt9"/>
+                                    <constraint firstItem="zr2-gh-y72" firstAttribute="top" secondItem="Gjy-ME-HIv" secondAttribute="top" id="Amq-6h-rZ2"/>
+                                    <constraint firstItem="D5R-WX-H3C" firstAttribute="leading" secondItem="Gjy-ME-HIv" secondAttribute="leading" id="NMN-pH-8sx"/>
+                                    <constraint firstAttribute="bottom" secondItem="D5R-WX-H3C" secondAttribute="bottom" id="w9v-pa-rKK"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-FU-hYl" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blD-VN-9gk" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="26" y="778" width="362" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="bnE-Hr-ZE8"/>
+                                    <constraint firstAttribute="height" constant="52" id="Wjd-Lk-q2Y"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Bnm-Pr-xIS"/>
+                        <viewLayoutGuide key="safeArea" id="9jn-V4-mrV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bnm-Pr-xIS" firstAttribute="trailing" secondItem="OSZ-FU-hYl" secondAttribute="trailing" constant="26" id="A2s-PA-LAG"/>
-                            <constraint firstItem="fv1-Xi-i1d" firstAttribute="top" secondItem="Bnm-Pr-xIS" secondAttribute="top" constant="65" id="Emn-ec-y0E"/>
-                            <constraint firstItem="fv1-Xi-i1d" firstAttribute="centerX" secondItem="Bnm-Pr-xIS" secondAttribute="centerX" id="V27-rT-cOH"/>
-                            <constraint firstItem="wZt-yN-OTf" firstAttribute="centerX" secondItem="n6V-6D-oAU" secondAttribute="centerX" id="Wi5-cw-tUv"/>
-                            <constraint firstItem="Bnm-Pr-xIS" firstAttribute="bottom" secondItem="OSZ-FU-hYl" secondAttribute="bottom" constant="32" id="YSM-AF-UjN"/>
-                            <constraint firstItem="OSZ-FU-hYl" firstAttribute="leading" secondItem="Bnm-Pr-xIS" secondAttribute="leading" constant="26" id="e3e-9x-kCs"/>
-                            <constraint firstItem="wZt-yN-OTf" firstAttribute="top" secondItem="fv1-Xi-i1d" secondAttribute="bottom" constant="40" id="yI7-wY-R04"/>
+                            <constraint firstItem="Gjy-ME-HIv" firstAttribute="top" secondItem="5X3-xl-9vP" secondAttribute="bottom" constant="40" id="JnU-sW-fLU"/>
+                            <constraint firstItem="Gjy-ME-HIv" firstAttribute="centerX" secondItem="vBN-RC-fj1" secondAttribute="centerX" id="PJh-nW-gMv"/>
+                            <constraint firstItem="5X3-xl-9vP" firstAttribute="centerX" secondItem="9jn-V4-mrV" secondAttribute="centerX" id="UmM-b4-Dgl"/>
+                            <constraint firstItem="blD-VN-9gk" firstAttribute="leading" secondItem="9jn-V4-mrV" secondAttribute="leading" constant="26" id="Z5O-DF-BKB"/>
+                            <constraint firstItem="9jn-V4-mrV" firstAttribute="trailing" secondItem="blD-VN-9gk" secondAttribute="trailing" constant="26" id="f54-Y6-epu"/>
+                            <constraint firstItem="5X3-xl-9vP" firstAttribute="top" secondItem="9jn-V4-mrV" secondAttribute="top" constant="65" id="fFq-I9-zgf"/>
+                            <constraint firstItem="9jn-V4-mrV" firstAttribute="bottom" secondItem="blD-VN-9gk" secondAttribute="bottom" constant="32" id="g9N-Eo-cgR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E4e-Zz-u5n"/>
+                    <navigationItem key="navigationItem" id="53x-b0-3i7"/>
                     <connections>
-                        <outlet property="femaleButton" destination="njq-DW-N1a" id="66s-TF-gSR"/>
-                        <outlet property="maleButton" destination="fy4-49-vzI" id="MhD-Xt-R8i"/>
-                        <outlet property="nextButton" destination="OSZ-FU-hYl" id="O5t-qd-f5d"/>
-                        <outlet property="titleLabel" destination="fv1-Xi-i1d" id="r8l-3s-lxf"/>
+                        <outlet property="femaleButton" destination="D5R-WX-H3C" id="IgL-tf-ZfZ"/>
+                        <outlet property="maleButton" destination="zr2-gh-y72" id="OKl-Um-zxe"/>
+                        <outlet property="nextButton" destination="blD-VN-9gk" id="B14-hF-GV9"/>
+                        <outlet property="titleLabel" destination="5X3-xl-9vP" id="Zvb-K8-Tqp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KN8-SP-2Bm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PtP-oP-vNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496" y="-169"/>
         </scene>
         <!--Question General View Controller-->
-        <scene sceneID="TPy-gk-ogO">
+        <scene sceneID="eeD-Hu-ZMG">
             <objects>
-                <viewController storyboardIdentifier="QuestionGeneralViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7MR-aB-2Jm" customClass="QuestionGeneralViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WdO-uH-jCq">
+                <viewController storyboardIdentifier="QuestionGeneralViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oU5-Mj-dO6" customClass="QuestionGeneralViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocD-rD-lIq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분은 어떤 사람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikA-D3-oV8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분은 어떤 사람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-rm-PRO">
                                 <rect key="frame" x="98.5" y="104" width="217" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-9c-gOz" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slu-ia-eD7" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-Jv-YWr" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8YN-QQ-5fx" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="56" y="184.5" width="302" height="404.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Der-JR-zr7">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="1RG-oc-Dmw">
                                 <rect key="frame" x="120" y="634" width="174" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtN-8X-2FT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny2-hf-i4r">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="UNI-4s-aWm"/>
-                                            <constraint firstAttribute="width" constant="70" id="WGo-eC-aga"/>
+                                            <constraint firstAttribute="height" constant="70" id="ukZ-TK-tTm"/>
+                                            <constraint firstAttribute="width" constant="70" id="xIL-Z8-aRN"/>
                                         </constraints>
                                         <state key="normal" image="reject"/>
                                         <connections>
-                                            <action selector="touchRejectButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="0y5-hi-ZXM"/>
+                                            <action selector="touchRejectButton:" destination="oU5-Mj-dO6" eventType="touchUpInside" id="bJl-zW-62F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-ZP-tXS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fck-UP-5pg">
                                         <rect key="frame" x="104" y="0.0" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="JtI-ji-iWS"/>
-                                            <constraint firstAttribute="width" constant="70" id="u4v-fy-4X7"/>
+                                            <constraint firstAttribute="height" constant="70" id="U1Z-Fo-pPl"/>
+                                            <constraint firstAttribute="width" constant="70" id="ixG-a5-0pg"/>
                                         </constraints>
                                         <state key="normal" image="confirm"/>
                                         <connections>
-                                            <action selector="touchConfirmButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="Ncj-VX-SI5"/>
+                                            <action selector="touchConfirmButton:" destination="oU5-Mj-dO6" eventType="touchUpInside" id="aUk-cZ-vbL"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzm-Ne-FWu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn3-tj-UMD">
                                 <rect key="frame" x="166" y="748" width="82" height="30"/>
                                 <state key="normal" title="잘 모르겠어요"/>
                                 <connections>
-                                    <action selector="touchUnknownButton:" destination="7MR-aB-2Jm" eventType="touchUpInside" id="8U7-V1-qCn"/>
+                                    <action selector="touchUnknownButton:" destination="oU5-Mj-dO6" eventType="touchUpInside" id="gqg-xp-JxQ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="cp3-N8-8Fb"/>
+                        <viewLayoutGuide key="safeArea" id="0se-gW-tfS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ikA-D3-oV8" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="12Z-QX-17q"/>
-                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="top" id="8gX-SA-zbw"/>
-                            <constraint firstItem="ikA-D3-oV8" firstAttribute="top" secondItem="cp3-N8-8Fb" secondAttribute="top" constant="60" id="Fzg-sr-lAx"/>
-                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="bottom" secondItem="2hX-9c-gOz" secondAttribute="bottom" id="JUa-MZ-gQQ"/>
-                            <constraint firstItem="2hX-9c-gOz" firstAttribute="top" secondItem="ikA-D3-oV8" secondAttribute="bottom" constant="60" id="Nj1-Mo-us1"/>
-                            <constraint firstItem="Bzm-Ne-FWu" firstAttribute="top" secondItem="Der-JR-zr7" secondAttribute="bottom" constant="44" id="PUi-7U-gwi"/>
-                            <constraint firstItem="2hX-9c-gOz" firstAttribute="leading" secondItem="cp3-N8-8Fb" secondAttribute="leading" constant="56" id="VUV-tF-RJY"/>
-                            <constraint firstItem="Bzm-Ne-FWu" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="Wvd-ai-b2l"/>
-                            <constraint firstItem="2hX-9c-gOz" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="YIw-bY-evh"/>
-                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="trailing" secondItem="2hX-9c-gOz" secondAttribute="trailing" id="aGP-Ty-sth"/>
-                            <constraint firstItem="cp3-N8-8Fb" firstAttribute="bottom" secondItem="Bzm-Ne-FWu" secondAttribute="bottom" constant="84" id="jLr-gA-GMj"/>
-                            <constraint firstItem="nfj-Jv-YWr" firstAttribute="leading" secondItem="2hX-9c-gOz" secondAttribute="leading" id="q6J-4q-ZMu"/>
-                            <constraint firstItem="Der-JR-zr7" firstAttribute="top" secondItem="2hX-9c-gOz" secondAttribute="bottom" constant="45" id="ua6-yz-cYZ"/>
-                            <constraint firstItem="Der-JR-zr7" firstAttribute="centerX" secondItem="cp3-N8-8Fb" secondAttribute="centerX" id="vio-nD-3sh"/>
+                            <constraint firstItem="1RG-oc-Dmw" firstAttribute="top" secondItem="slu-ia-eD7" secondAttribute="bottom" constant="45" id="1WD-I9-6nb"/>
+                            <constraint firstItem="8YN-QQ-5fx" firstAttribute="trailing" secondItem="slu-ia-eD7" secondAttribute="trailing" id="9LM-od-e1G"/>
+                            <constraint firstItem="8YN-QQ-5fx" firstAttribute="top" secondItem="slu-ia-eD7" secondAttribute="top" id="A9O-K3-dT8"/>
+                            <constraint firstItem="slu-ia-eD7" firstAttribute="top" secondItem="BJO-rm-PRO" secondAttribute="bottom" constant="60" id="LSc-os-JTS"/>
+                            <constraint firstItem="slu-ia-eD7" firstAttribute="leading" secondItem="0se-gW-tfS" secondAttribute="leading" constant="56" id="NR0-dJ-nq9"/>
+                            <constraint firstItem="BJO-rm-PRO" firstAttribute="top" secondItem="0se-gW-tfS" secondAttribute="top" constant="60" id="RQl-E3-BDw"/>
+                            <constraint firstItem="0se-gW-tfS" firstAttribute="bottom" secondItem="Jn3-tj-UMD" secondAttribute="bottom" constant="84" id="TZO-8D-bGA"/>
+                            <constraint firstItem="slu-ia-eD7" firstAttribute="centerX" secondItem="0se-gW-tfS" secondAttribute="centerX" id="YNj-wz-atw"/>
+                            <constraint firstItem="Jn3-tj-UMD" firstAttribute="top" secondItem="1RG-oc-Dmw" secondAttribute="bottom" constant="44" id="c0O-rj-5NO"/>
+                            <constraint firstItem="Jn3-tj-UMD" firstAttribute="centerX" secondItem="0se-gW-tfS" secondAttribute="centerX" id="flK-qg-Y5d"/>
+                            <constraint firstItem="1RG-oc-Dmw" firstAttribute="centerX" secondItem="0se-gW-tfS" secondAttribute="centerX" id="gdw-X5-5Nt"/>
+                            <constraint firstItem="8YN-QQ-5fx" firstAttribute="leading" secondItem="slu-ia-eD7" secondAttribute="leading" id="gid-f3-NPe"/>
+                            <constraint firstItem="8YN-QQ-5fx" firstAttribute="bottom" secondItem="slu-ia-eD7" secondAttribute="bottom" id="mHb-UP-efb"/>
+                            <constraint firstItem="BJO-rm-PRO" firstAttribute="centerX" secondItem="0se-gW-tfS" secondAttribute="centerX" id="wIP-93-HwU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmButton" destination="hPC-ZP-tXS" id="eBP-kf-EKG"/>
-                        <outlet property="currentCardView" destination="nfj-Jv-YWr" id="shv-u1-qv2"/>
-                        <outlet property="rejectButton" destination="KtN-8X-2FT" id="DLf-q5-4mW"/>
-                        <outlet property="titleLabel" destination="ikA-D3-oV8" id="RFa-rN-KNU"/>
-                        <outlet property="unknownButton" destination="Bzm-Ne-FWu" id="jUf-hT-I1S"/>
+                        <outlet property="confirmButton" destination="fck-UP-5pg" id="Phc-Sc-VCV"/>
+                        <outlet property="currentCardView" destination="8YN-QQ-5fx" id="fdr-KS-nVg"/>
+                        <outlet property="rejectButton" destination="Ny2-hf-i4r" id="VO3-wr-04y"/>
+                        <outlet property="titleLabel" destination="BJO-rm-PRO" id="I5w-oF-iaT"/>
+                        <outlet property="unknownButton" destination="Jn3-tj-UMD" id="pjW-bb-Fde"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fqY-DK-0X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaV-JP-ARL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495.6521739130435" y="488.83928571428567"/>
         </scene>
         <!--Question Birthday View Controller-->
-        <scene sceneID="jl3-SL-cXk">
+        <scene sceneID="tEj-up-DQW">
             <objects>
-                <viewController storyboardIdentifier="QuestionBirthdayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nSj-8n-Zhe" customClass="QuestionBirthdayViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9oM-FZ-kYv">
+                <viewController storyboardIdentifier="QuestionBirthdayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dtf-W3-jD1" customClass="QuestionBirthdayViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VVT-KE-azk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 생일이 언제인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iao-yk-qtR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받는 분의 생일이 언제인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-8P-lPh">
                                 <rect key="frame" x="70.5" y="104" width="273" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="AJK-cW-Zgo" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-UZ-OAi" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="111.5" y="161.5" width="85.5" height="50.5"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYD-gS-djb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9N-Ot-DcG">
                                 <rect key="frame" x="203" y="172" width="8.5" height="29"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-P0-Ohj" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-4S-9rJ" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="28" y="778" width="358" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="ijt-6c-vPA"/>
+                                    <constraint firstAttribute="height" constant="52" id="9gQ-Pd-cTp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="NOu-0z-OC2" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="n21-Lq-v5U" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="217.5" y="161.5" width="74.5" height="50.5"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="jwT-Aj-kzh"/>
+                        <viewLayoutGuide key="safeArea" id="JLw-0J-ddK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kYD-gS-djb" firstAttribute="centerX" secondItem="Iao-yk-qtR" secondAttribute="centerX" id="Blf-h8-iCj"/>
-                            <constraint firstItem="Iao-yk-qtR" firstAttribute="centerX" secondItem="jwT-Aj-kzh" secondAttribute="centerX" id="C39-1z-iVr"/>
-                            <constraint firstItem="AJK-cW-Zgo" firstAttribute="centerY" secondItem="kYD-gS-djb" secondAttribute="centerY" id="D2f-L6-Oth"/>
-                            <constraint firstItem="NOu-0z-OC2" firstAttribute="leading" secondItem="kYD-gS-djb" secondAttribute="trailing" constant="6" id="DcG-Lv-bXe"/>
-                            <constraint firstItem="y2Z-P0-Ohj" firstAttribute="leading" secondItem="jwT-Aj-kzh" secondAttribute="leading" constant="28" id="KJe-zr-7sJ"/>
-                            <constraint firstItem="jwT-Aj-kzh" firstAttribute="trailing" secondItem="y2Z-P0-Ohj" secondAttribute="trailing" constant="28" id="RAJ-cx-WLn"/>
-                            <constraint firstItem="kYD-gS-djb" firstAttribute="leading" secondItem="AJK-cW-Zgo" secondAttribute="trailing" constant="6" id="Xcg-vJ-Mie"/>
-                            <constraint firstItem="Iao-yk-qtR" firstAttribute="top" secondItem="jwT-Aj-kzh" secondAttribute="top" constant="60" id="YL3-84-P2G"/>
-                            <constraint firstItem="kYD-gS-djb" firstAttribute="top" secondItem="Iao-yk-qtR" secondAttribute="bottom" constant="44" id="ac4-Sj-psn"/>
-                            <constraint firstItem="NOu-0z-OC2" firstAttribute="centerY" secondItem="kYD-gS-djb" secondAttribute="centerY" id="nc7-bo-VY6"/>
-                            <constraint firstItem="jwT-Aj-kzh" firstAttribute="bottom" secondItem="y2Z-P0-Ohj" secondAttribute="bottom" constant="32" id="nqd-RY-9WG"/>
+                            <constraint firstItem="n21-Lq-v5U" firstAttribute="centerY" secondItem="N9N-Ot-DcG" secondAttribute="centerY" id="BUZ-pQ-QBK"/>
+                            <constraint firstItem="JLw-0J-ddK" firstAttribute="trailing" secondItem="Ghf-4S-9rJ" secondAttribute="trailing" constant="28" id="CF6-ds-WnJ"/>
+                            <constraint firstItem="N9N-Ot-DcG" firstAttribute="leading" secondItem="JgS-UZ-OAi" secondAttribute="trailing" constant="6" id="IXH-Qr-Ywu"/>
+                            <constraint firstItem="Ghf-4S-9rJ" firstAttribute="leading" secondItem="JLw-0J-ddK" secondAttribute="leading" constant="28" id="Xad-gy-7ur"/>
+                            <constraint firstItem="pW7-8P-lPh" firstAttribute="top" secondItem="JLw-0J-ddK" secondAttribute="top" constant="60" id="YyM-mp-MFE"/>
+                            <constraint firstItem="N9N-Ot-DcG" firstAttribute="top" secondItem="pW7-8P-lPh" secondAttribute="bottom" constant="44" id="aUE-qa-gxL"/>
+                            <constraint firstItem="N9N-Ot-DcG" firstAttribute="centerX" secondItem="pW7-8P-lPh" secondAttribute="centerX" id="cdn-0H-IOR"/>
+                            <constraint firstItem="JgS-UZ-OAi" firstAttribute="centerY" secondItem="N9N-Ot-DcG" secondAttribute="centerY" id="eZ0-bU-Hhz"/>
+                            <constraint firstItem="JLw-0J-ddK" firstAttribute="bottom" secondItem="Ghf-4S-9rJ" secondAttribute="bottom" constant="32" id="eyk-Pl-cDP"/>
+                            <constraint firstItem="pW7-8P-lPh" firstAttribute="centerX" secondItem="JLw-0J-ddK" secondAttribute="centerX" id="riK-HX-hyQ"/>
+                            <constraint firstItem="n21-Lq-v5U" firstAttribute="leading" secondItem="N9N-Ot-DcG" secondAttribute="trailing" constant="6" id="zR8-Xj-Gmg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateTextField" destination="NOu-0z-OC2" id="z5b-30-EVi"/>
-                        <outlet property="monthTextField" destination="AJK-cW-Zgo" id="a58-8w-U2b"/>
-                        <outlet property="nextButton" destination="y2Z-P0-Ohj" id="QOQ-Nu-VjX"/>
-                        <outlet property="titleLabel" destination="Iao-yk-qtR" id="2zR-h6-IaY"/>
+                        <outlet property="dateTextField" destination="n21-Lq-v5U" id="plq-Vh-FfL"/>
+                        <outlet property="monthTextField" destination="JgS-UZ-OAi" id="cce-qd-vBW"/>
+                        <outlet property="nextButton" destination="Ghf-4S-9rJ" id="hUc-oj-CjO"/>
+                        <outlet property="titleLabel" destination="pW7-8P-lPh" id="aac-ch-pRy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FSl-yq-WkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yv7-1b-0uk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1235" y="-169"/>
         </scene>
         <!--Question Money View Controller-->
-        <scene sceneID="247-bm-tgz">
+        <scene sceneID="gat-Iv-uQ1">
             <objects>
-                <viewController storyboardIdentifier="QuestionMoneyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z5O-ue-sqU" customClass="QuestionMoneyViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y5B-Mc-wMa">
+                <viewController storyboardIdentifier="QuestionMoneyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XDc-eI-CTh" customClass="QuestionMoneyViewController" customModule="Yetda2_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irD-sv-K6J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얼마 정도 생각하시나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHQ-Ps-4Ta">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얼마 정도 생각하시나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkp-Wv-jrv">
                                 <rect key="frame" x="110.5" y="104" width="193" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-px-boS" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPQ-DA-fCz" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="28" y="778" width="358" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="4ow-Bv-325"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="lZ6-YD-YcG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="XhI-Sz-hsy"/>
+                                    <constraint firstAttribute="height" constant="52" id="c87-4U-oVK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOW-Ym-eQ4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-um-tbK">
                                 <rect key="frame" x="80" y="276.5" width="149" height="50.5"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 부터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-iP-e32">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 부터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjY-23-may">
                                 <rect key="frame" x="237" y="281" width="127" height="41"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-mQ-pg8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만원 까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdC-hS-cd8">
                                 <rect key="frame" x="237" y="362" width="127" height="41"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdx-rK-39J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-Dv-cIW">
                                 <rect key="frame" x="80" y="357" width="149" height="51"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PJ4-Fv-9KS"/>
+                        <viewLayoutGuide key="safeArea" id="BDY-Nb-p2E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="trailing" secondItem="g3d-iP-e32" secondAttribute="trailing" id="3By-aX-57X"/>
-                            <constraint firstItem="wOW-Ym-eQ4" firstAttribute="leading" secondItem="PJ4-Fv-9KS" secondAttribute="leading" constant="80" id="9Ri-se-ecR"/>
-                            <constraint firstItem="rHQ-Ps-4Ta" firstAttribute="centerX" secondItem="PJ4-Fv-9KS" secondAttribute="centerX" id="MqC-XM-iCL"/>
-                            <constraint firstAttribute="trailing" secondItem="g3d-iP-e32" secondAttribute="trailing" constant="50" id="SGs-wx-r5a"/>
-                            <constraint firstItem="PJ4-Fv-9KS" firstAttribute="bottom" secondItem="fR8-px-boS" secondAttribute="bottom" constant="32" id="WrG-4A-dTc"/>
-                            <constraint firstAttribute="bottom" secondItem="g3d-iP-e32" secondAttribute="bottom" constant="574" id="Xyh-Fv-5OO"/>
-                            <constraint firstItem="Mdx-rK-39J" firstAttribute="leading" secondItem="wOW-Ym-eQ4" secondAttribute="leading" id="a04-D4-AkR"/>
-                            <constraint firstItem="fR8-px-boS" firstAttribute="leading" secondItem="PJ4-Fv-9KS" secondAttribute="leading" constant="28" id="dOA-CN-uhl"/>
-                            <constraint firstItem="Mdx-rK-39J" firstAttribute="trailing" secondItem="wOW-Ym-eQ4" secondAttribute="trailing" id="ddg-S0-Djw"/>
-                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="top" secondItem="g3d-iP-e32" secondAttribute="bottom" constant="40" id="f9n-gj-KOg"/>
-                            <constraint firstItem="Mdx-rK-39J" firstAttribute="centerY" secondItem="4cT-mQ-pg8" secondAttribute="centerY" id="kKf-eE-SI2"/>
-                            <constraint firstItem="PJ4-Fv-9KS" firstAttribute="trailing" secondItem="fR8-px-boS" secondAttribute="trailing" constant="28" id="mKR-Li-FrH"/>
-                            <constraint firstItem="g3d-iP-e32" firstAttribute="leading" secondItem="wOW-Ym-eQ4" secondAttribute="trailing" constant="8" id="rPL-Ma-AM2"/>
-                            <constraint firstItem="rHQ-Ps-4Ta" firstAttribute="top" secondItem="PJ4-Fv-9KS" secondAttribute="top" constant="60" id="swY-ia-qwa"/>
-                            <constraint firstItem="4cT-mQ-pg8" firstAttribute="leading" secondItem="g3d-iP-e32" secondAttribute="leading" id="uH4-Ei-qDb"/>
-                            <constraint firstItem="wOW-Ym-eQ4" firstAttribute="centerY" secondItem="g3d-iP-e32" secondAttribute="centerY" id="zYH-Nx-GzF"/>
+                            <constraint firstAttribute="trailing" secondItem="fjY-23-may" secondAttribute="trailing" constant="50" id="26o-Sg-hdD"/>
+                            <constraint firstItem="bVc-Dv-cIW" firstAttribute="trailing" secondItem="ffj-um-tbK" secondAttribute="trailing" id="2hE-NK-UeF"/>
+                            <constraint firstItem="fkp-Wv-jrv" firstAttribute="top" secondItem="BDY-Nb-p2E" secondAttribute="top" constant="60" id="3db-8l-nqm"/>
+                            <constraint firstItem="bVc-Dv-cIW" firstAttribute="centerY" secondItem="zdC-hS-cd8" secondAttribute="centerY" id="D3P-De-dSm"/>
+                            <constraint firstItem="bVc-Dv-cIW" firstAttribute="leading" secondItem="ffj-um-tbK" secondAttribute="leading" id="E8c-vM-6cG"/>
+                            <constraint firstItem="zdC-hS-cd8" firstAttribute="leading" secondItem="fjY-23-may" secondAttribute="leading" id="Iyh-Qg-dlp"/>
+                            <constraint firstItem="fjY-23-may" firstAttribute="leading" secondItem="ffj-um-tbK" secondAttribute="trailing" constant="8" id="MnR-DM-Oa5"/>
+                            <constraint firstItem="fkp-Wv-jrv" firstAttribute="centerX" secondItem="BDY-Nb-p2E" secondAttribute="centerX" id="NJB-lI-2hw"/>
+                            <constraint firstItem="zdC-hS-cd8" firstAttribute="trailing" secondItem="fjY-23-may" secondAttribute="trailing" id="Rlf-YH-Ilk"/>
+                            <constraint firstItem="XPQ-DA-fCz" firstAttribute="leading" secondItem="BDY-Nb-p2E" secondAttribute="leading" constant="28" id="SXF-44-Xau"/>
+                            <constraint firstItem="BDY-Nb-p2E" firstAttribute="bottom" secondItem="XPQ-DA-fCz" secondAttribute="bottom" constant="32" id="cPt-y2-m4r"/>
+                            <constraint firstItem="zdC-hS-cd8" firstAttribute="top" secondItem="fjY-23-may" secondAttribute="bottom" constant="40" id="cfX-9Y-Qy2"/>
+                            <constraint firstItem="BDY-Nb-p2E" firstAttribute="trailing" secondItem="XPQ-DA-fCz" secondAttribute="trailing" constant="28" id="g3z-g5-o5r"/>
+                            <constraint firstItem="ffj-um-tbK" firstAttribute="leading" secondItem="BDY-Nb-p2E" secondAttribute="leading" constant="80" id="mzH-6z-5gP"/>
+                            <constraint firstItem="ffj-um-tbK" firstAttribute="centerY" secondItem="fjY-23-may" secondAttribute="centerY" id="nZG-RW-X5L"/>
+                            <constraint firstAttribute="bottom" secondItem="fjY-23-may" secondAttribute="bottom" constant="574" id="rIu-Ge-iTn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="maxPriceTextField" destination="Mdx-rK-39J" id="rZb-xT-YYL"/>
-                        <outlet property="minPriceTextField" destination="wOW-Ym-eQ4" id="fXN-vf-1id"/>
-                        <outlet property="nextButton" destination="fR8-px-boS" id="N4k-Cg-noB"/>
-                        <outlet property="titleLabel" destination="rHQ-Ps-4Ta" id="Mhy-Bu-acH"/>
+                        <outlet property="maxPriceTextField" destination="bVc-Dv-cIW" id="Vf6-hk-rMo"/>
+                        <outlet property="minPriceTextField" destination="ffj-um-tbK" id="7lr-uc-Bcf"/>
+                        <outlet property="nextButton" destination="XPQ-DA-fCz" id="QMk-a2-KeD"/>
+                        <outlet property="titleLabel" destination="fkp-Wv-jrv" id="MGn-0t-Hyv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZN-P9-a5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOA-xb-ycm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940.5797101449277" y="-169.41964285714286"/>
         </scene>
