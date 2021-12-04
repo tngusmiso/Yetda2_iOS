@@ -15,13 +15,90 @@
                     <view key="view" contentMode="scaleToFill" id="1ez-mR-ORZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님을 위한 추천선물" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-w8-FbL">
+                                <rect key="frame" x="143.5" y="150" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-nA-2Kj" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="38" y="191" width="338" height="432"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O07-Lu-y37">
+                                        <rect key="frame" x="52" y="68" width="234" height="227"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마카롱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aY-fU-yMJ">
+                                        <rect key="frame" x="146.5" y="326" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="완전 취향저격 선물일거에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMe-rN-IYE">
+                                        <rect key="frame" x="73.5" y="361" width="191" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9aY-fU-yMJ" firstAttribute="centerX" secondItem="cXc-nA-2Kj" secondAttribute="centerX" id="92x-ek-xEk"/>
+                                    <constraint firstAttribute="bottom" secondItem="pMe-rN-IYE" secondAttribute="bottom" constant="50" id="9Xi-8f-8W2"/>
+                                    <constraint firstItem="O07-Lu-y37" firstAttribute="top" secondItem="cXc-nA-2Kj" secondAttribute="top" constant="68" id="ESB-Ij-DZb"/>
+                                    <constraint firstItem="pMe-rN-IYE" firstAttribute="centerX" secondItem="cXc-nA-2Kj" secondAttribute="centerX" id="IH2-iR-YQ3"/>
+                                    <constraint firstItem="O07-Lu-y37" firstAttribute="leading" secondItem="cXc-nA-2Kj" secondAttribute="leading" constant="52" id="J16-Pr-ema"/>
+                                    <constraint firstItem="pMe-rN-IYE" firstAttribute="top" secondItem="9aY-fU-yMJ" secondAttribute="bottom" constant="14" id="ODq-gl-6ln"/>
+                                    <constraint firstAttribute="trailing" secondItem="O07-Lu-y37" secondAttribute="trailing" constant="52" id="dAg-sA-DMO"/>
+                                    <constraint firstItem="9aY-fU-yMJ" firstAttribute="top" secondItem="O07-Lu-y37" secondAttribute="bottom" constant="31" id="que-72-MZ1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-7L-kjQ" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="28" y="778" width="358" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="E9P-Za-NE2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchMoveToHomeButton:" destination="Dji-KW-Ikq" eventType="touchUpInside" id="kEa-8H-lnA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-am-dTY">
+                                <rect key="frame" x="160" y="719" width="94" height="30"/>
+                                <state key="normal" title="또 다른 선물은?"/>
+                                <connections>
+                                    <action selector="touchAnotherGiftButton:" destination="Dji-KW-Ikq" eventType="touchUpInside" id="1sT-PX-ULz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jNj-63-Ndk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jNj-63-Ndk" firstAttribute="trailing" secondItem="cXc-nA-2Kj" secondAttribute="trailing" constant="38" id="4do-Po-SOq"/>
+                            <constraint firstItem="cXc-nA-2Kj" firstAttribute="top" secondItem="Zfm-w8-FbL" secondAttribute="bottom" constant="20" id="9Pt-Av-UZw"/>
+                            <constraint firstItem="jNj-63-Ndk" firstAttribute="bottom" secondItem="Fg0-7L-kjQ" secondAttribute="bottom" constant="32" id="9rF-OG-G11"/>
+                            <constraint firstItem="Fg0-7L-kjQ" firstAttribute="top" secondItem="z1b-am-dTY" secondAttribute="bottom" constant="29" id="DAS-oV-QsR"/>
+                            <constraint firstItem="cXc-nA-2Kj" firstAttribute="leading" secondItem="jNj-63-Ndk" secondAttribute="leading" constant="38" id="HJJ-AU-hqi"/>
+                            <constraint firstItem="z1b-am-dTY" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="XHU-85-hvb"/>
+                            <constraint firstItem="Fg0-7L-kjQ" firstAttribute="leading" secondItem="jNj-63-Ndk" secondAttribute="leading" constant="28" id="csO-WO-5Iy"/>
+                            <constraint firstItem="Zfm-w8-FbL" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="lNt-2s-GE7"/>
+                            <constraint firstItem="Zfm-w8-FbL" firstAttribute="top" secondItem="jNj-63-Ndk" secondAttribute="top" constant="106" id="tCT-BE-D3A"/>
+                            <constraint firstItem="z1b-am-dTY" firstAttribute="top" secondItem="cXc-nA-2Kj" secondAttribute="bottom" constant="96" id="tGy-2f-hZI"/>
+                            <constraint firstItem="jNj-63-Ndk" firstAttribute="trailing" secondItem="Fg0-7L-kjQ" secondAttribute="trailing" constant="28" id="yBj-MT-hzX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moveToHomeButton" destination="Fg0-7L-kjQ" id="xPI-RH-gVg"/>
+                        <outlet property="presentImageView" destination="O07-Lu-y37" id="JbX-w0-E9J"/>
+                        <outlet property="presentImg" destination="O07-Lu-y37" id="hrS-Ro-2EQ"/>
+                        <outlet property="presentNameLabel" destination="9aY-fU-yMJ" id="Z6L-PH-o2R"/>
+                        <outlet property="presnetResetButton" destination="z1b-am-dTY" id="i2H-r5-PkK"/>
+                        <outlet property="titleLabel" destination="Zfm-w8-FbL" id="PTj-bn-z0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaV-ke-TZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="186"/>
+            <point key="canvasLocation" x="73.913043478260875" y="185.49107142857142"/>
         </scene>
     </scenes>
     <resources>

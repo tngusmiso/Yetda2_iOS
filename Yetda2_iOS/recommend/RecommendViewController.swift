@@ -6,24 +6,50 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecommendViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var presentImageView: UIImageView!
+    @IBOutlet weak var presentNameLabel: UILabel!
+    @IBOutlet weak var presnetResetButton: UIButton!
+    @IBOutlet weak var moveToHomeButton: HorizontalRoundButton!
+    let giftList = [Gift]()
+    var index = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //get gift list from realm
+        //progress on
+        setup()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setup(){
+//        progress on
+        self.titleLabel.text = Strings.resultTitle
+        self.titleLabel.textColor = .brownishGrey
+        setGift()
     }
-    */
 
+    private func setGift(){
+        if(index < giftList.count){
+            self.presentImageView.kf.setImage(with: URL(string: giftList[index].image))
+            self.presentNameLabel.text = giftList[index].name
+            index+=1
+        }else{
+            index = 0
+        }
+        //progress off
+    }
+    
+    @IBAction func touchAnotherGiftButton(_ sender: Any) {
+        setGift()
+    }
+    
+    @IBAction func touchMoveToHomeButton(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true)
+    }
 }

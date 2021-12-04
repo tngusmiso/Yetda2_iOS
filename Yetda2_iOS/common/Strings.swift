@@ -17,7 +17,8 @@ struct Strings {
     static let birthdayTitle = "\(giftOwner)의 생일이 언제인가요?"
     static let moneyTitle = "얼마 정도 생각하시나요?"
     static let questionTitle = "\(giftOwner)은 어떤 사람인가요?"
-    
+    static let resultTitle = "\(giftOwner)님을 위한 추천선물"
+
     // Button Text
     static let defaultButton = "버튼"
     static let skip = "건너뛰기"
@@ -25,4 +26,5 @@ struct Strings {
     static let female = "여성"
     static let male = "남성"
     static let unknown = "잘 모르겠어요"
+    static let home = "처음으로 돌아가기"
 }
