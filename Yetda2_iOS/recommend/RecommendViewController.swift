@@ -15,7 +15,7 @@ class RecommendViewController: UIViewController {
     @IBOutlet weak var presentNameLabel: UILabel!
     @IBOutlet weak var presnetResetButton: UIButton!
     @IBOutlet weak var moveToHomeButton: HorizontalRoundButton!
-    let giftList = [Gift]()
+    let giftList = [RealmGift]()
     var index = 0
 
     override func viewDidLoad() {

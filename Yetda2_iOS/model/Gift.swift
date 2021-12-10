@@ -8,10 +8,16 @@
 import Foundation
 import RealmSwift
 
-class Gift: Object {
+/// [Realm객체] 선물 정보
+/// - var id: Int                  - 고유 ID
+/// - var name: String      - 선물 이름
+/// - var price: Int             - 가격
+/// - var tags: [String]    - 선물 특성 태그
+/// - var image: String      - 이미지 URL
+class RealmGift: Object {
     @objc dynamic var id: Int = 1
     @objc dynamic var name: String = ""
-    @objc dynamic var price: String = ""
-    @objc dynamic var tags: String = ""
+    @objc dynamic var price: Int = 1
     @objc dynamic var image: String = ""
+    let tags = List<String>()
 }
