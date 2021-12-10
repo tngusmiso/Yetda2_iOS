@@ -18,7 +18,7 @@ class FirestoreManager {
         self.db = Firestore.firestore()
     }
     
-    func getRecentUpdatedDate(completion: @escaping (Date) -> Void) {
+    func getRecentUpdatedDate(completion: @escaping (Date) throws -> Void) {
         let docRef = db.collection("updates").document("recent_updates")
         docRef.getDocument { (document, error) in
             if let error = error {
@@ -36,14 +36,14 @@ class FirestoreManager {
                     print("[Not Exist] UpdateModel in Firestore")
                     return
                 }
-                completion(updatedAt.dateValue())
+                try? completion(updatedAt.dateValue())
             case .failure(let error):
                 print("[Error] Decoding UpdateModel: \(error)")
             }
         }
     }
     
-    func getGifts(completion: @escaping ([Gift]) -> Void) {
+    func getGifts(completion: @escaping ([Gift]) throws -> Void) {
         db.collection("presents").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("[Error] getting Gifts from Firestore: \(error)")
@@ -60,11 +60,11 @@ class FirestoreManager {
                 print("[Error] Decoding Gifts")
                 return
             }
-            completion(gifts)
+            try? completion(gifts)
         }
     }
     
-    func getQuestions(completion: @escaping ([Question]) -> Void) {
+    func getQuestions(completion: @escaping ([Question]) throws -> Void) {
         db.collection("question").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("[Error] getting Questions from Firestore: \(error)")
@@ -81,7 +81,7 @@ class FirestoreManager {
                 print("[Error] Decoding Questions")
                 return
             }
-            completion(questions)
+            try? completion(questions)
         }
     }
 }

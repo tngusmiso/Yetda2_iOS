@@ -10,15 +10,24 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // firebase update 확인
         FirestoreManager.shared.getRecentUpdatedDate { firestoreUpatedAt in
-            print("updatedAt: \(firestoreUpatedAt)")
-            if true /*firestoreUpatedAt != realmUpdatedAt*/{
-                //updateRealmUpdatedAt()
-                FirestoreManager.shared.getGifts { _ in
-                    //updateRealmGifts()
+            if firestoreUpatedAt != RealmManager.shared.updatedAt{
+                print("Firestore updated! Realm also need update.")
+                
+                // realm에 update 저장
+                try RealmManager.shared.resetUpdatedAt(firestoreUpatedAt)
+                
+                // realm에 gifts 저장
+                FirestoreManager.shared.getGifts { firestoreGifts in
+                    let gifts: [RealmGift] = firestoreGifts.map { RealmGift(firestoreGift: $0) }
+                    try RealmManager.shared.resetGifts(gifts)
                 }
-                FirestoreManager.shared.getQuestions { _ in 
-                    //updateRealmQuestions()
+                
+                // realm에 questions 저장
+                FirestoreManager.shared.getQuestions { firestoreQuestions in
+                    let questions: [RealmQuestion] = firestoreQuestions.map { RealmQuestion(firestoreQuestion: $0) }
+                    try RealmManager.shared.resetQuestions(questions)
                 }
             }
         }

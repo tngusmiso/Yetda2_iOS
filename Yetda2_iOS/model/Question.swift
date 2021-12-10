@@ -18,4 +18,16 @@ class RealmQuestion: Object {
     @objc dynamic var question: String = ""
     @objc dynamic var tag: String = ""
     @objc dynamic var isAsked: Bool = false
+    
+    init(firestoreQuestion question: FirestoreManager.Question) {
+        super.init()
+        self.id = question.id
+        self.question = question.question
+        self.tag = question.tag
+        self.isAsked = false
+    }
+    
+    required override init() {
+        super.init()
+    }
 }
