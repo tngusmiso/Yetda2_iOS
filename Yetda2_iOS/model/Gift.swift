@@ -19,14 +19,18 @@ class RealmGift: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var price: Int = 1
     @objc dynamic var image: String = ""
-    private let tagList = List<String>()
-    var tags: [String] {
-        get { 
-            tagList.map{$0}
+    let tagList = List<RealmTag>()
+    private var tags: [String] {
+        get {
+            tagList.map { $0.tag }
         }
         set {
             tagList.removeAll()
-            tagList.append(objectsIn: newValue)
+            newValue.compactMap {
+                RealmManager.shared.tag(of: $0)
+            }.forEach {
+                tagList.append($0)
+            }
         }
     }
     

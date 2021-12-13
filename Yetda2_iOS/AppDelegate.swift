@@ -6,32 +6,40 @@
 //
 
 import UIKit
+//import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        print("path =  \(Realm.Configuration.defaultConfiguration.fileURL!)")
+//        file:///Users/lim/Library/Developer/CoreSimulator/Devices/423645FD-8431-41A0-9A40-C6DD1A5B9CE4/data/Containers/Data/Application/A26C699F-5346-4BF1-A7B3-687FA42053F3/Documents/default.realm
+        
         // firebase update 확인
         FirestoreManager.shared.getRecentUpdatedDate { firestoreUpatedAt in
-            if firestoreUpatedAt != RealmManager.shared.updatedAt{
+            if firestoreUpatedAt != RealmManager.shared.recentUpdateDate{
                 print("Firestore updated! Realm also need update.")
                 
-                // realm에 update 저장
-                try RealmManager.shared.resetUpdatedAt(firestoreUpatedAt)
-                
-                // realm에 gifts 저장
-                FirestoreManager.shared.getGifts { firestoreGifts in
-                    let gifts: [RealmGift] = firestoreGifts.map { RealmGift(firestoreGift: $0) }
-                    try RealmManager.shared.resetGifts(gifts)
-                }
-                
-                // realm에 questions 저장
-                FirestoreManager.shared.getQuestions { firestoreQuestions in
-                    let questions: [RealmQuestion] = firestoreQuestions.map { RealmQuestion(firestoreQuestion: $0) }
-                    try RealmManager.shared.resetQuestions(questions)
+                do {
+                    // realm에 update 저장
+                    try RealmManager.shared.addUpdate(date: firestoreUpatedAt)
+                    
+                    // realm에 gifts 저장
+                    FirestoreManager.shared.getGifts { firestoreGifts in
+                        let gifts: [RealmGift] = firestoreGifts.map { RealmGift(firestoreGift: $0) }
+                        try RealmManager.shared.resetGifts(gifts)
+                    }
+                    
+                    // realm에 questions 저장
+                    FirestoreManager.shared.getQuestions { firestoreQuestions in
+                        let questions: [RealmQuestion] = firestoreQuestions.map { RealmQuestion(firestoreQuestion: $0) }
+                        try RealmManager.shared.resetQuestions(questions)
+                    }
+                } catch {
+                    try RealmManager.shared.deleteRecentUpdate()
                 }
             }
         }
-
+        
         return true
     }
 
