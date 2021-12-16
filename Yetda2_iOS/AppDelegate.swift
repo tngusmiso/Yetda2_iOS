@@ -40,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // 앱 시작 시 이전 질문 기록 삭제
+        try? RealmManager.shared.deleteAllTags()
         return true
     }
 

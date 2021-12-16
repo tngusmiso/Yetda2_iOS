@@ -14,6 +14,18 @@ class QuestionBirthdayViewController: UIViewController {
     
     private var month: String { monthTextField.text ?? "" }
     private var date: String { dateTextField.text ?? "" }
+    private var season: String? {
+        guard let month = Int(month) else {
+            return nil
+        }
+        if month == 6 || month == 7 || month == 8 || month == 9 {
+            return "여름"
+        }
+        if month == 1 || month == 2 || month == 11 || month == 12 {
+            return "겨울"
+        }
+        return nil
+    }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var monthTextField: NumericTextField!
@@ -55,11 +67,12 @@ extension QuestionBirthdayViewController: QuestionViewController {
     }
     
     @objc func skipVC() {
+        RealmManager.shared.resetSeasonTagAndReverse(nil)
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func storeData() {
-        // 날짜 저장
+        RealmManager.shared.resetSeasonTagAndReverse(self.season)
     }
     
     @objc func storeDataAndNextVC() {

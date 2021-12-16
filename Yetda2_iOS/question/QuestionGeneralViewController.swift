@@ -19,6 +19,11 @@ class QuestionGeneralViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(RealmManager.shared.recommendedGifts)
+    }
+    
     @IBAction func touchRejectButton(_ sender: Any) {
         currentCardView.moveLeft()
     }

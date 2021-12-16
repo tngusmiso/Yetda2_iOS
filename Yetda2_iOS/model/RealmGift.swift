@@ -1,5 +1,5 @@
 //
-//  Gift.swift
+//  RealmGift.swift
 //  Yetda2_iOS
 //
 //  Created by 임수현 on 2021/12/02.
@@ -26,11 +26,7 @@ class RealmGift: Object {
         }
         set {
             tagList.removeAll()
-            newValue.compactMap {
-                RealmManager.shared.tag(of: $0)
-            }.forEach {
-                tagList.append($0)
-            }
+            tagList.append(objectsIn: newValue.compactMap { RealmTag(tag: $0) })
         }
     }
     
@@ -45,5 +41,16 @@ class RealmGift: Object {
     
     required override init() {
         super.init()
+    }
+    
+    override var description: String {
+        """
+        RealmGift {
+            id = \(self.id);
+            name = \(self.name);
+            price = \(self.price);
+            image = \(self.image);
+            tagList = \(self.tags);
+        """
     }
 }

@@ -49,11 +49,13 @@ extension QuestionSexViewController: QuestionViewController {
     }
     
     @objc func skipVC() {
+        RealmManager.shared.resetGenderTagsAndReverse(nil)
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func storeData() {
-        // 성별 isFemale 저장 self.roundButtonGroup?.selectedButton == self.femaleButton
+        let gender = self.roundButtonGroup?.selectedButton == self.femaleButton ? "여성" : "남성"
+        RealmManager.shared.resetGenderTagsAndReverse(gender)
     }
     
     @objc func storeDataAndNextVC() {

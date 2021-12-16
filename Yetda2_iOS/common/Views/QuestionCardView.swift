@@ -33,6 +33,7 @@ class QuestionCardView: UIView {
         self.layer.shadowRadius = 20
         self.layer.shadowOpacity = 0.1
         self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
         
         // label constraints
         self.addSubview(label)

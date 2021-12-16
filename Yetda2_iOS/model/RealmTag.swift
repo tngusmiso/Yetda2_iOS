@@ -12,4 +12,9 @@ import RealmSwift
 /// - var tag: String      - 태그
 class RealmTag: Object {
     @objc dynamic var tag: String = ""
+    
+    convenience init(tag: String) {
+       self.init()
+       self.tag = tag
+    }
 }

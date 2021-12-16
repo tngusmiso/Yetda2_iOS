@@ -12,8 +12,8 @@ class QuestionMoneyViewController: UIViewController {
         .instantiateViewController(identifier: "QuestionGeneralViewController")
         as! QuestionGeneralViewController
     
-    var minPrice: Int { Int(minPriceTextField.text ?? "") ?? 0 }
-    var maxPrice: Int { Int(maxPriceTextField.text ?? "") ?? Int.max }
+    var minPrice: Int { (Int(minPriceTextField.text ?? "") ?? 0) * 10_000  }
+    var maxPrice: Int { (Int(maxPriceTextField.text ?? "") ?? 5_000) * 10_000  }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var minPriceTextField: UITextField!
@@ -58,20 +58,30 @@ extension QuestionMoneyViewController: QuestionViewController {
     }
     
     @objc func skipVC() {
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        StoredData.shared.price = (0, 50_000_000)
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+        goToRecommendViewController()
     }
     
     func storeData() {
-        // 최소 최대 금액 저장
+        StoredData.shared.price = (minPrice, maxPrice)
     }
     
     @objc func storeDataAndNextVC() {
         self.storeData()
-        self.navigationController?.pushViewController(nextVC, animated: true)
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+        goToRecommendViewController()
     }
     
     func checkNextButtonEnable() -> Bool {
         minPrice <= maxPrice
+    }
+    
+    // TODO: 출시를 위한 임시 코드. 해당 코드는 QuestionGenenralViewController에서 선물이 10개 이하로 뽑히면 그 때 호출되어야 한다.
+    func goToRecommendViewController() {
+        let questionStoryboard = UIStoryboard(name: "Recommend", bundle: nil)
+        let recommendVC = questionStoryboard.instantiateViewController(identifier: "RecommendViewController")
+        self.navigationController?.pushViewController(recommendVC, animated: true)
     }
 }
 

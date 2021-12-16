@@ -59,7 +59,7 @@ class RealmManager {
     
     // MARK: - 태그 정보
     /// 응답한 특성에 해당하는 Tag 목록 (Results<RealmTag>)
-    private var tags: Results<RealmTag> {
+    var tags: Results<RealmTag> {
         self.realm.objects(RealmTag.self)
     }
     /// 응답한 특성에 해당하는 태그 문자열 목록 (String Array)
@@ -90,6 +90,38 @@ class RealmManager {
             print("[Failed] 모든 Tag 삭제에 실패하였습니다. : \(error)")
         }
     }
+    /// 질문 번복 > 계절 관련 태그 삭제 후 재설정
+    func resetSeasonTagAndReverse(_ newTagString: String?) {
+        let seasonTags = self.tags.filter("tag == %@ OR tag == %@", "여름", "겨울")
+        do {
+            try self.realm.write {
+                self.realm.delete(seasonTags)
+                
+                guard let tagString = newTagString?.reversedSeason else { return }
+                let newTag = RealmTag()
+                newTag.tag = tagString
+                self.realm.add(newTag)
+            }
+        } catch (let error) {
+            print("[Failed] 계절 Tag 갱신에 실패하였습니다. : \(error)")
+        }
+    }
+    /// 질문 번복 > 성별 관련 태그 삭제 후 재설정
+    func resetGenderTagsAndReverse(_ newTagString: String?) {
+        let genderTags = self.tags.filter("tag == %@ OR tag == %@", "여성", "남성")
+        do {
+            try self.realm.write {
+                self.realm.delete(genderTags)
+                
+                guard let tagString = newTagString?.reversedGender else { return }
+                let newTag = RealmTag()
+                newTag.tag = tagString
+                self.realm.add(newTag)
+            }
+        } catch (let error) {
+            print("[Failed] 성별 Tag 삭제에 실패하였습니다. : \(error)")
+        }
+    }
     
     // MARK: - 질문 정보
     /// 모든 질문
@@ -101,8 +133,8 @@ class RealmManager {
         self.questions.filter("isAsked == true")
     }
     /// 가능한 질문 (조건 : isAsked == false && 현재 tag 목록 에 해당하지 않는 질문들)
-    private var availableQuestions: Results<RealmQuestion> {
-        self.questions.filter("isAsked == %@ AND NOT tag IN %@", false, tags)
+    var availableQuestions: Results<RealmQuestion> {
+        self.questions.filter("isAsked == %@ AND NOT tag IN %@", false, tagStringArray)
     }
     /// 가능한 질문 중, 랜덤 질문 하나
     var randomAvailableQuestion: RealmQuestion {
@@ -150,8 +182,9 @@ class RealmManager {
         self.realm.objects(RealmGift.self)
     }
     /// 질문 하나 응답 완료 > 현 시점에서 추천 가능한 전체 선물 목록
-    func recommendedGifts(startPrice: Int = 0, endPrice: Int = 99999999999) -> Results<RealmGift> {
-        self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", tags, startPrice, endPrice)
+    var recommendedGifts: Results<RealmGift> {
+        let price = StoredData.shared.price
+        return self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", tags, price.0, price.1)
     }
     /// 앱 실행 > 새 버전이 있을 시 선물 업데이트 (새 선물들로 초기화)
     func resetGifts(_ newGifts: [RealmGift]) throws {

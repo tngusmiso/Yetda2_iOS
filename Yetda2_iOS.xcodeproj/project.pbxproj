@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		3A214B482763B4E7000EA7CD /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A214B472763B4E7000EA7CD /* RealmManager.swift */; };
 		3A214B4B2763D5E7000EA7CD /* RealmTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A214B4A2763D5E7000EA7CD /* RealmTag.swift */; };
+		3A214B5D2767B82B000EA7CD /* StoredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A214B5C2767B82B000EA7CD /* StoredData.swift */; };
+		3A214B61276B6CB0000EA7CD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A214B60276B6CB0000EA7CD /* String+Extension.swift */; };
 		3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AAA2759116D0085B9B7 /* AppDelegate.swift */; };
 		3A466AAD2759116D0085B9B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AAC2759116D0085B9B7 /* SceneDelegate.swift */; };
 		3A466AB22759116D0085B9B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB02759116D0085B9B7 /* Main.storyboard */; };
 		3A466AB42759116F0085B9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB32759116F0085B9B7 /* Assets.xcassets */; };
 		3A466AB72759116F0085B9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A466AB52759116F0085B9B7 /* LaunchScreen.storyboard */; };
-		3A466ACA2759123B0085B9B7 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AC92759123B0085B9B7 /* Gift.swift */; };
+		3A466ACA2759123B0085B9B7 /* RealmGift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AC92759123B0085B9B7 /* RealmGift.swift */; };
 		3A466ACF275912AC0085B9B7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ACE275912AC0085B9B7 /* Realm */; };
 		3A466AD1275912AC0085B9B7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD0275912AC0085B9B7 /* RealmSwift */; };
 		3A466AD52759139D0085B9B7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466AD42759139D0085B9B7 /* FirebaseFirestore */; };
@@ -23,8 +25,8 @@
 		3A466ADB2759139D0085B9B7 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADA2759139D0085B9B7 /* FirebaseStorageSwift-Beta */; };
 		3A466ADD2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADC2759139D0085B9B7 /* FirebaseDatabaseSwift-Beta */; };
 		3A466ADF2759139D0085B9B7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A466ADE2759139D0085B9B7 /* FirebaseStorage */; };
-		3A466AE2275913A80085B9B7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE1275913A80085B9B7 /* Question.swift */; };
-		3A466AE5275913B60085B9B7 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE4275913B60085B9B7 /* Update.swift */; };
+		3A466AE2275913A80085B9B7 /* RealmQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE1275913A80085B9B7 /* RealmQuestion.swift */; };
+		3A466AE5275913B60085B9B7 /* RealmUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AE4275913B60085B9B7 /* RealmUpdate.swift */; };
 		3A466AEB275913EA0085B9B7 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */; };
 		3A466AEE275914020085B9B7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AED275914020085B9B7 /* Strings.swift */; };
 		3A466AF2275914320085B9B7 /* HorizontalRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466AF1275914320085B9B7 /* HorizontalRoundButton.swift */; };
@@ -54,6 +56,8 @@
 		3083D668F4D7412F4A5FFD2F /* Pods-Yetda2_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yetda2_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Yetda2_iOS/Pods-Yetda2_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3A214B472763B4E7000EA7CD /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		3A214B4A2763D5E7000EA7CD /* RealmTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTag.swift; sourceTree = "<group>"; };
+		3A214B5C2767B82B000EA7CD /* StoredData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredData.swift; sourceTree = "<group>"; };
+		3A214B60276B6CB0000EA7CD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Yetda2_iOS/common/Extensions/String+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		3A466AA72759116D0085B9B7 /* Yetda2_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yetda2_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A466AAA2759116D0085B9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A466AAC2759116D0085B9B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,9 +65,9 @@
 		3A466AB32759116F0085B9B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A466AB62759116F0085B9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A466AB82759116F0085B9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A466AC92759123B0085B9B7 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
-		3A466AE1275913A80085B9B7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		3A466AE4275913B60085B9B7 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		3A466AC92759123B0085B9B7 /* RealmGift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmGift.swift; sourceTree = "<group>"; };
+		3A466AE1275913A80085B9B7 /* RealmQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuestion.swift; sourceTree = "<group>"; };
+		3A466AE4275913B60085B9B7 /* RealmUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUpdate.swift; sourceTree = "<group>"; };
 		3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		3A466AED275914020085B9B7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3A466AF1275914320085B9B7 /* HorizontalRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRoundButton.swift; sourceTree = "<group>"; };
@@ -198,10 +202,11 @@
 			children = (
 				3A466B3627638A4F0085B9B7 /* FirestoreManager.swift */,
 				3A214B472763B4E7000EA7CD /* RealmManager.swift */,
-				3A466AC92759123B0085B9B7 /* Gift.swift */,
-				3A466AE1275913A80085B9B7 /* Question.swift */,
-				3A466AE4275913B60085B9B7 /* Update.swift */,
+				3A466AC92759123B0085B9B7 /* RealmGift.swift */,
+				3A466AE1275913A80085B9B7 /* RealmQuestion.swift */,
+				3A466AE4275913B60085B9B7 /* RealmUpdate.swift */,
 				3A214B4A2763D5E7000EA7CD /* RealmTag.swift */,
+				3A214B5C2767B82B000EA7CD /* StoredData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */,
+				3A214B60276B6CB0000EA7CD /* String+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -394,12 +400,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A214B5D2767B82B000EA7CD /* StoredData.swift in Sources */,
 				3A214B4B2763D5E7000EA7CD /* RealmTag.swift in Sources */,
 				3A466B15275915370085B9B7 /* QuestionViewController.swift in Sources */,
-				3A466ACA2759123B0085B9B7 /* Gift.swift in Sources */,
-				3A466AE2275913A80085B9B7 /* Question.swift in Sources */,
+				3A466ACA2759123B0085B9B7 /* RealmGift.swift in Sources */,
+				3A466AE2275913A80085B9B7 /* RealmQuestion.swift in Sources */,
 				3A466B0F275915250085B9B7 /* QuestionMoneyViewController.swift in Sources */,
-				3A466AE5275913B60085B9B7 /* Update.swift in Sources */,
+				3A214B61276B6CB0000EA7CD /* String+Extension.swift in Sources */,
+				3A466AE5275913B60085B9B7 /* RealmUpdate.swift in Sources */,
 				3A214B482763B4E7000EA7CD /* RealmManager.swift in Sources */,
 				3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */,
 				3A466B23275919AC0085B9B7 /* AnswerResetAlertView.swift in Sources */,
@@ -575,7 +583,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.upf2021.Yetda2-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -595,7 +603,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.upf2021.Yetda2-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
