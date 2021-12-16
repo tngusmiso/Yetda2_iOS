@@ -11,54 +11,41 @@ import Kingfisher
 class RecommendViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var presentImageView: UIImageView!
-    @IBOutlet weak var presentNameLabel: UILabel!
-    @IBOutlet weak var presnetResetButton: UIButton!
-    @IBOutlet weak var moveToHomeButton: HorizontalRoundButton!
+    @IBOutlet weak var giftImage: UIImageView!
+    @IBOutlet weak var giftNameLabel: UILabel!
+    @IBOutlet weak var anotherGiftButton: UIButton!
+    @IBOutlet weak var homeButton: HorizontalRoundButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
-    var giftList = [RealmGift]()
-    var index = 0
     var giftName = "" {
-        didSet { self.view.layoutIfNeeded() }
+        didSet {
+            self.giftNameLabel.text = giftName
+            if giftName == "" {
+                self.descriptionLabel.text = "추천할 수 있는 선물이 없습니다."
+            }
+        }
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
-        //get gift list from realm
-        //progress on
-        setup()
-    }
-    
-    private func setup(){
-//        progress on
-        self.titleLabel.text = Strings.resultTitle
-        self.titleLabel.textColor = .brownishGrey
-        self.moveToHomeButton.setTitle(Strings.home, for: .normal)
+        self.titleLabel.text = Strings.recommendTitle
+        
+        let gifts = RealmManager.shared.recommendedGifts
+        if gifts.count > 0 {
+            self.giftName = gifts[Int.random(in: 0..<gifts.count)].name
+        } else {
+            self.giftName = ""
+        }
+        self.homeButton.text = Strings.home
+        self.homeButton.addTarget(self, action: #selector(goToHomeVC), for: .touchUpInside)
         
         // TODO: 출시를 위해 hidden 처리
-        self.presnetResetButton.isEnabled = false
-        self.presnetResetButton.alpha = 0
-        
-        setGift()
+        self.anotherGiftButton.isEnabled = false
+        self.anotherGiftButton.alpha = 0
     }
 
-    private func setGift(){
-//        if(index < giftList.count){
-//            self.presentImageView.kf.setImage(with: URL(string: giftList[index].image))
-//            self.presentNameLabel.text = giftList[index].name
-//            index+=1
-//        }else{
-//            index = 0
-//        }
-        //progress off
-    }
-    
-    @IBAction func touchAnotherGiftButton(_ sender: Any) {
-        setGift()
-    }
-    
-    @IBAction func touchMoveToHomeButton(_ sender: Any) {
+    @objc func goToHomeVC() {
         self.navigationController?.dismiss(animated: true)
     }
 }

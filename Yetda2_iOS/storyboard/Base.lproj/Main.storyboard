@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-ub-E21">
-                                <rect key="frame" x="207" y="134" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-ub-E21">
+                                <rect key="frame" x="24" y="134" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,9 +29,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-j5-kTy">
-                                <rect key="frame" x="175" y="708" width="64" height="64"/>
+                                <rect key="frame" x="332" y="780" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="c1G-FO-gUT"/>
+                                    <constraint firstAttribute="width" secondItem="RmE-j5-kTy" secondAttribute="height" multiplier="1:1" id="0gx-Ge-rxq"/>
                                     <constraint firstAttribute="height" constant="64" id="tnN-m7-51T"/>
                                 </constraints>
                                 <state key="normal" image="present"/>
@@ -43,14 +43,14 @@
                         <viewLayoutGuide key="safeArea" id="hN4-RK-n7i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dDg-ub-E21" firstAttribute="centerX" secondItem="hN4-RK-n7i" secondAttribute="centerX" id="1hX-rk-yOq"/>
+                            <constraint firstItem="hN4-RK-n7i" firstAttribute="trailing" secondItem="RmE-j5-kTy" secondAttribute="trailing" constant="18" id="Fge-fM-iGp"/>
                             <constraint firstItem="hN4-RK-n7i" firstAttribute="trailing" secondItem="QT4-9z-Xh2" secondAttribute="trailing" constant="62" id="IQp-Tf-1uA"/>
                             <constraint firstItem="QT4-9z-Xh2" firstAttribute="leading" secondItem="hN4-RK-n7i" secondAttribute="leading" constant="62" id="RPI-Km-ukf"/>
-                            <constraint firstItem="hN4-RK-n7i" firstAttribute="bottom" secondItem="RmE-j5-kTy" secondAttribute="bottom" constant="90" id="S2s-LN-MHr"/>
                             <constraint firstItem="dDg-ub-E21" firstAttribute="top" secondItem="hN4-RK-n7i" secondAttribute="top" constant="90" id="aQm-vj-d5o"/>
-                            <constraint firstItem="RmE-j5-kTy" firstAttribute="centerX" secondItem="hN4-RK-n7i" secondAttribute="centerX" id="ceM-L1-Mra"/>
                             <constraint firstItem="QT4-9z-Xh2" firstAttribute="centerX" secondItem="hN4-RK-n7i" secondAttribute="centerX" id="rEr-d9-TCg"/>
+                            <constraint firstItem="hN4-RK-n7i" firstAttribute="bottom" secondItem="RmE-j5-kTy" secondAttribute="bottom" constant="18" id="vOb-kh-hO1"/>
                             <constraint firstItem="QT4-9z-Xh2" firstAttribute="centerY" secondItem="hN4-RK-n7i" secondAttribute="centerY" id="wbJ-n2-ylq"/>
+                            <constraint firstItem="dDg-ub-E21" firstAttribute="leading" secondItem="Xof-J7-jdL" secondAttribute="leading" constant="24" id="yUQ-6k-ZGF"/>
                         </constraints>
                     </view>
                     <connections>
