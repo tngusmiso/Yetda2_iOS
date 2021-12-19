@@ -62,66 +62,28 @@ class RealmManager {
     var tags: Results<RealmTag> {
         self.realm.objects(RealmTag.self)
     }
-    /// 응답한 특성에 해당하는 태그 문자열 목록 (String Array)
-    private var tagStringArray: [String] {
-        self.tags.map { $0.tag }
+    var storedTags: Results<RealmTag> {
+//        let storedTagList = List<RealmTag>()
+//        storedTagList.append(objectsIn: StoredData.tags.map { RealmTag(tag: $0) })
+        return self.tags.filter("tag IN %@", StoredData.tags)
+    }
+    var storedTagStringArray: [String] {
+        self.storedTags.map { $0.tag }
     }
     /// 문자열과 일치하는 RealmTag 객체 반환
     func tag(of string: String) -> RealmTag? {
         self.tags.filter("tag == %@", string).first
     }
-    /// 질문에 Yes로 응답 > 질문 특성에 해당하는 태그 추가
-    func addTag(_ tagList: List<RealmTag>) throws {
+    func addTagOfGift(_ tag: RealmTag) throws {
         do {
             try self.realm.write {
-                self.realm.add(tagList)
+                self.realm.add(tag)
             }
         } catch (let error) {
-            print("[Failed] Tag \(tagList.map(\.tag)) 추가에 실패하였습니다. : \(error)")
+            print("[Failed] Tag \(tag.tag)) 추가에 실패하였습니다. : \(error)")
         }
     }
-    /// 질문 종료 > 응답 특성이 저장된 Tag 목록 전부 삭제
-    func deleteAllTags() throws {
-        do {
-            try self.realm.write {
-                self.realm.delete(self.tags)
-            }
-        } catch (let error) {
-            print("[Failed] 모든 Tag 삭제에 실패하였습니다. : \(error)")
-        }
-    }
-    /// 질문 번복 > 계절 관련 태그 삭제 후 재설정
-    func resetSeasonTagAndReverse(_ newTagString: String?) {
-        let seasonTags = self.tags.filter("tag == %@ OR tag == %@", "여름", "겨울")
-        do {
-            try self.realm.write {
-                self.realm.delete(seasonTags)
-                
-                guard let tagString = newTagString?.reversedSeason else { return }
-                let newTag = RealmTag()
-                newTag.tag = tagString
-                self.realm.add(newTag)
-            }
-        } catch (let error) {
-            print("[Failed] 계절 Tag 갱신에 실패하였습니다. : \(error)")
-        }
-    }
-    /// 질문 번복 > 성별 관련 태그 삭제 후 재설정
-    func resetGenderTagsAndReverse(_ newTagString: String?) {
-        let genderTags = self.tags.filter("tag == %@ OR tag == %@", "여성", "남성")
-        do {
-            try self.realm.write {
-                self.realm.delete(genderTags)
-                
-                guard let tagString = newTagString?.reversedGender else { return }
-                let newTag = RealmTag()
-                newTag.tag = tagString
-                self.realm.add(newTag)
-            }
-        } catch (let error) {
-            print("[Failed] 성별 Tag 삭제에 실패하였습니다. : \(error)")
-        }
-    }
+    
     
     // MARK: - 질문 정보
     /// 모든 질문
@@ -134,7 +96,7 @@ class RealmManager {
     }
     /// 가능한 질문 (조건 : isAsked == false && 현재 tag 목록 에 해당하지 않는 질문들)
     var availableQuestions: Results<RealmQuestion> {
-        self.questions.filter("isAsked == %@ AND NOT tag IN %@", false, tagStringArray)
+        self.questions.filter("isAsked == %@ AND NOT tag IN %@", false, self.storedTagStringArray)
     }
     /// 가능한 질문 중, 랜덤 질문 하나
     var randomAvailableQuestion: RealmQuestion {
@@ -183,8 +145,8 @@ class RealmManager {
     }
     /// 질문 하나 응답 완료 > 현 시점에서 추천 가능한 전체 선물 목록
     var recommendedGifts: Results<RealmGift> {
-        let price = StoredData.shared.price
-        return self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", tags, price.0, price.1)
+        let price = StoredData.price
+        return self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", self.storedTags, price.0, price.1)
     }
     /// 앱 실행 > 새 버전이 있을 시 선물 업데이트 (새 선물들로 초기화)
     func resetGifts(_ newGifts: [RealmGift]) throws {

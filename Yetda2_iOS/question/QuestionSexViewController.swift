@@ -45,17 +45,18 @@ class QuestionSexViewController: UIViewController {
 extension QuestionSexViewController: QuestionViewController {
     @objc func quitQuestionVC() {
         // 팝업
+        StoredData.resetGenderTagsAndReverse(nil)
         self.dismiss(animated: true, completion: nil)
     }
     
     @objc func skipVC() {
-        RealmManager.shared.resetGenderTagsAndReverse(nil)
+        StoredData.resetGenderTagsAndReverse(nil)
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func storeData() {
         let gender = self.roundButtonGroup?.selectedButton == self.femaleButton ? "여성" : "남성"
-        RealmManager.shared.resetGenderTagsAndReverse(gender)
+        StoredData.resetGenderTagsAndReverse(gender)
     }
     
     @objc func storeDataAndNextVC() {

@@ -63,16 +63,17 @@ extension QuestionBirthdayViewController: QuestionViewController {
     
     @objc func quitQuestionVC() {
         // 팝업
+        StoredData.resetSeasonTagAndReverse(nil)
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func skipVC() {
-        RealmManager.shared.resetSeasonTagAndReverse(nil)
+        StoredData.resetSeasonTagAndReverse(nil)
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func storeData() {
-        RealmManager.shared.resetSeasonTagAndReverse(self.season)
+        StoredData.resetSeasonTagAndReverse(self.season)
     }
     
     @objc func storeDataAndNextVC() {

@@ -13,14 +13,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        try? RealmManager.shared.deleteAllTags()
+        StoredData.resetAll()
     }
     
     @IBAction func clickStartButton(_ sender: Any) {

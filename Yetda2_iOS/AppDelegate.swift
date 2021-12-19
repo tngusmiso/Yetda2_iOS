@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        print("path =  \(Realm.Configuration.defaultConfiguration.fileURL!)")
-//        file:///Users/lim/Library/Developer/CoreSimulator/Devices/423645FD-8431-41A0-9A40-C6DD1A5B9CE4/data/Containers/Data/Application/A26C699F-5346-4BF1-A7B3-687FA42053F3/Documents/default.realm
+//        11pro path : file:///Users/lim/Library/Developer/CoreSimulator/Devices/423645FD-8431-41A0-9A40-C6DD1A5B9CE4/data/Containers/Data/Application/D7F04BEF-8159-4AC7-8407-2265215DEB50/Documents/default.realm
         
         // firebase update 확인
         FirestoreManager.shared.getRecentUpdatedDate { firestoreUpatedAt in
@@ -39,9 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        
-        // 앱 시작 시 이전 질문 기록 삭제
-        try? RealmManager.shared.deleteAllTags()
         return true
     }
 

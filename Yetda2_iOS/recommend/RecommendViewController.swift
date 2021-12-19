@@ -18,13 +18,9 @@ class RecommendViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var giftName = "" {
-        didSet {
-            self.giftNameLabel.text = giftName
-            if giftName == "" {
-                self.descriptionLabel.text = "추천할 수 있는 선물이 없습니다."
-            }
-        }
+        didSet { self.giftNameLabel.text = giftName }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -32,10 +28,10 @@ class RecommendViewController: UIViewController {
         self.titleLabel.text = Strings.recommendTitle
         
         let gifts = RealmManager.shared.recommendedGifts
-        if gifts.count > 0 {
-            self.giftName = gifts[Int.random(in: 0..<gifts.count)].name
+        if gifts.isEmpty {
+            self.setEmptyRecommendStatus()
         } else {
-            self.giftName = ""
+            self.giftName = gifts[Int.random(in: 0..<gifts.count)].name
         }
         self.homeButton.text = Strings.home
         self.homeButton.addTarget(self, action: #selector(goToHomeVC), for: .touchUpInside)
@@ -47,5 +43,10 @@ class RecommendViewController: UIViewController {
 
     @objc func goToHomeVC() {
         self.navigationController?.dismiss(animated: true)
+    }
+    
+    private func setEmptyRecommendStatus() {
+        self.giftName = ""
+        self.descriptionLabel.text = "추천할 수 있는 선물이 없습니다."
     }
 }

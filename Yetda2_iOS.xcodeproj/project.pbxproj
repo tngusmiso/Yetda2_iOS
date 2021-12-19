@@ -171,8 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				3A466B14275915370085B9B7 /* QuestionViewController.swift */,
-				3A466B08275915140085B9B7 /* QuestionBirthdayViewController.swift */,
 				3A466B112759152C0085B9B7 /* QuestionSexViewController.swift */,
+				3A466B08275915140085B9B7 /* QuestionBirthdayViewController.swift */,
 				3A466B0E275915250085B9B7 /* QuestionMoneyViewController.swift */,
 				3A466B0B2759151D0085B9B7 /* QuestionGeneralViewController.swift */,
 			);

@@ -54,17 +54,18 @@ class QuestionMoneyViewController: UIViewController {
 extension QuestionMoneyViewController: QuestionViewController {
     @objc func quitQuestionVC() {
         // 팝업
+        StoredData.resetPrice()
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func skipVC() {
-        StoredData.shared.price = (0, 50_000_000)
+        StoredData.resetPrice()
 //        self.navigationController?.pushViewController(nextVC, animated: true)
         goToRecommendViewController()
     }
     
     func storeData() {
-        StoredData.shared.price = (minPrice, maxPrice)
+        StoredData.price = (minPrice, maxPrice)
     }
     
     @objc func storeDataAndNextVC() {

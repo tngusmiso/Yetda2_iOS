@@ -14,7 +14,7 @@ class RealmTag: Object {
     @objc dynamic var tag: String = ""
     
     convenience init(tag: String) {
-       self.init()
-       self.tag = tag
+        self.init()
+        self.tag = tag
     }
 }

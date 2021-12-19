@@ -26,7 +26,14 @@ class RealmGift: Object {
         }
         set {
             tagList.removeAll()
-            tagList.append(objectsIn: newValue.compactMap { RealmTag(tag: $0) })
+            tagList.append(objectsIn: newValue.compactMap {
+                guard let realmTag = RealmManager.shared.tag(of: $0) else {
+                    let realmTag = RealmTag(tag: $0)
+                    try? RealmManager.shared.addTagOfGift(realmTag)
+                    return realmTag
+                }
+                return realmTag
+            })
         }
     }
     
