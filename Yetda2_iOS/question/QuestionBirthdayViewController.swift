@@ -18,18 +18,19 @@ class QuestionBirthdayViewController: UIViewController {
         guard let month = Int(month) else {
             return nil
         }
-        if month == 6 || month == 7 || month == 8 || month == 9 {
-            return "여름"
-        }
-        if month == 1 || month == 2 || month == 11 || month == 12 {
+        switch month {
+        case 1,2,11,12:
             return "겨울"
+        case 6,7,8,9:
+            return "여름"
+        default:
+            return nil
         }
-        return nil
     }
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var monthTextField: NumericTextField!
-    @IBOutlet weak var dateTextField: NumericTextField!
+    @IBOutlet weak var monthTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var nextButton: HorizontalRoundButton!
     
     override func viewDidLoad() {
@@ -45,9 +46,7 @@ class QuestionBirthdayViewController: UIViewController {
         self.titleLabel.textColor = .brownishGrey
         
         self.monthTextField.delegate = self
-        self.monthTextField.setup(length: 2, min: 1, max: 12)
         self.dateTextField.delegate = self
-        self.dateTextField.setup(length: 2, min: 1, max: 31)
         
         self.nextButton.text = Strings.next
         self.nextButton.isEnabled = checkNextButtonEnable()
@@ -88,33 +87,81 @@ extension QuestionBirthdayViewController: QuestionViewController {
 
 extension QuestionBirthdayViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // keypad 닫을 때 최소값 판별
-        if let numericTextField = textField as? NumericTextField {
-            if numericTextField.value < numericTextField.minValue {
-                numericTextField.value = numericTextField.minValue
-            }
+        guard let text = textField.text else {
+            return
         }
+        
+        // 최소값 판별
+        guard let intValue = Int(text) else {
+            self.nextButton.isEnabled = checkNextButtonEnable()
+            return
+        }
+        if intValue < 1 { textField.text = "" }
+        else { textField.text = String(format: "%02d", intValue)}
+        
+        // 최대값 판별
+        if let month = Int(self.month), month > 12 {
+            self.monthTextField.text = "12"
+        }
+        if let date = Int(self.date) {
+            self.setDateTextFieldMaxIfNeed(from: date)
+        }
+        
         // 다음버튼 활성화
         self.nextButton.isEnabled = checkNextButtonEnable()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let numericTextField = textField as? NumericTextField else {
-            return true
+        // backspace
+        if string.isEmpty { return true }
+        
+        // 숫자 외에는 입력 불가
+        guard let text = textField.text,
+              let textRange = Range(range, in: text),
+              var newValue = Int(text.replacingCharacters(in: textRange, with: string)) else {
+            return false
         }
-        if numericTextField == self.dateTextField {
-            switch self.monthTextField.value {
-            case 2:
-                numericTextField.setup(max: 29)
-            case 4,6,9,11:
-                numericTextField.setup(max: 30)
-            case 1,3,5,7,8,10,12:
-                numericTextField.setup(max: 31)
-            default:
-                break
-            }
+        
+        if newValue == 0 { return true }
+        
+        switch textField {
+        case self.monthTextField:
+            if newValue >= 12 { newValue = 12 }
+            textField.text = String(format: "%02d", newValue)
+        case self.dateTextField:
+            setDateTextFieldMaxIfNeed(from: newValue)
+        default:
+            break
         }
-        numericTextField.input(value: string)
+        
         return false
+    }
+    
+    private func maxDate(of month: Int?) -> Int? {
+        switch month {
+        case 2:
+            return 29
+        case 4,6,9,11:
+            return 30
+        case 1,3,5,7,8,10,12:
+            return 31
+        default:
+            return nil
+        }
+    }
+    
+    private func setDateTextFieldMaxIfNeed(from newDate: Int) {
+        var newDate = newDate
+        
+        // monthTextField의 입력이 잘못되었다면 (없다면)
+        guard let month = Int(self.month),
+              let maxDate = self.maxDate(of: month) else {
+            if newDate > 31 { newDate = 31 }
+            self.dateTextField.text = String(format: "%02d", newDate)
+            return
+        }
+        
+        if newDate > maxDate { newDate = maxDate }
+        self.dateTextField.text = String(format: "%02d", newDate)
     }
 }

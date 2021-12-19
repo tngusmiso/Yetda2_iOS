@@ -187,14 +187,20 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-UZ-OAi" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
-                                <rect key="frame" x="111.5" y="161.5" width="85.5" height="50.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-UZ-OAi">
+                                <rect key="frame" x="110.5" y="161.5" width="86" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="2cj-ea-53y"/>
+                                </constraints>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9N-Ot-DcG">
-                                <rect key="frame" x="203" y="172" width="8.5" height="29"/>
+                                <rect key="frame" x="202.5" y="172" width="9" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="btn-uM-Rf8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -206,8 +212,11 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="n21-Lq-v5U" customClass="NumericTextField" customModule="Yetda2_iOS" customModuleProvider="target">
-                                <rect key="frame" x="217.5" y="161.5" width="74.5" height="50.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="n21-Lq-v5U">
+                                <rect key="frame" x="217.5" y="161.5" width="86" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="xLF-dM-uyn"/>
+                                </constraints>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
