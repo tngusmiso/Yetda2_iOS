@@ -11,7 +11,7 @@ class StoredData {
     static let shared = StoredData()
     private init() { }
     
-    private var _price: (Int, Int) = (0, 50_000_000) // (min, max)
+    private var _price: (Int, Int) = (0, 5_000) // (min, max) 단위: 만원
     static var price: (Int, Int) {
         get { StoredData.shared._price }
         set { StoredData.shared._price = newValue }
@@ -28,7 +28,7 @@ class StoredData {
         StoredData.resetPrice()
     }
     static func resetPrice() {
-        StoredData.price = (0, 50_000_000)
+        StoredData.price = (0, 5_000)
     }
     static func storeTag(_ tag: String) {
         StoredData.shared._tags.insert(tag)

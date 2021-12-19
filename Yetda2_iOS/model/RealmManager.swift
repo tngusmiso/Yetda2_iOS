@@ -146,7 +146,7 @@ class RealmManager {
     /// 질문 하나 응답 완료 > 현 시점에서 추천 가능한 전체 선물 목록
     var recommendedGifts: Results<RealmGift> {
         let price = StoredData.price
-        return self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", self.storedTags, price.0, price.1)
+        return self.gifts.filter("NOT ANY tagList IN %@ AND price BETWEEN {%@, %@}", self.storedTags, price.0 * 10_000, price.1 * 10_000)
     }
     /// 앱 실행 > 새 버전이 있을 시 선물 업데이트 (새 선물들로 초기화)
     func resetGifts(_ newGifts: [RealmGift]) throws {

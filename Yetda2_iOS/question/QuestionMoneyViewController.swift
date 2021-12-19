@@ -12,8 +12,8 @@ class QuestionMoneyViewController: UIViewController {
         .instantiateViewController(identifier: "QuestionGeneralViewController")
         as! QuestionGeneralViewController
     
-    var minPrice: Int { (Int(minPriceTextField.text ?? "") ?? 0) * 10_000  }
-    var maxPrice: Int { (Int(maxPriceTextField.text ?? "") ?? 5_000) * 10_000  }
+    var minPrice: Int { Int(minPriceTextField.text ?? "") ?? 0 }
+    var maxPrice: Int { Int(maxPriceTextField.text ?? "") ?? 5_000 }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var minPriceTextField: UITextField!
@@ -106,11 +106,24 @@ extension QuestionMoneyViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         textField.invalidateIntrinsicContentSize()
         
-        // backspace 또는 숫자만 입력가능
-        if string.isEmpty || Int(string) != nil {
+        // backspace
+        if string.isEmpty {
             return true
         }
         
-        return false
+        guard let text = textField.text,
+              let textRange = Range(range, in: text) else {
+            return false
+        }
+        let newText = text.replacingCharacters(in: textRange, with: string)
+        guard let intValue = Int(newText) else {
+            return false
+        }
+        if intValue > 5000 {
+            textField.text = "5000"
+            return false
+        }
+        
+        return true
     }
 }
