@@ -74,24 +74,29 @@ class RealmManager {
     func tag(of string: String) -> RealmTag? {
         self.tags.filter("tag == %@", string).first
     }
+    /// 응답한 질문 태그 저장
     func addTagOfGift(_ tag: RealmTag) throws {
         do {
             try self.realm.write {
                 self.realm.add(tag)
             }
+            print("\(tag.tag) 저장: \(self.storedTagStringArray)")
         } catch (let error) {
             print("[Failed] Tag \(tag.tag)) 추가에 실패하였습니다. : \(error)")
         }
     }
-    
     
     // MARK: - 질문 정보
     /// 모든 질문
     private var questions: Results<RealmQuestion> {
         self.realm.objects(RealmQuestion.self)
     }
-    /// 이미 응답한 질문  (조건 : isAsked == true)
-    private var askedQuestions: Results<RealmQuestion> {
+    /// 응답한 질문 (조건: isAnswered == true)
+    var answeredQuestions: Results<RealmQuestion> {
+        self.questions.filter("isAnswered == true")
+    }
+    /// 이미 물어본 질문  (조건 : isAsked == true)
+    var askedQuestions: Results<RealmQuestion> {
         self.questions.filter("isAsked == true")
     }
     /// 가능한 질문 (조건 : isAsked == false && 현재 tag 목록 에 해당하지 않는 질문들)
@@ -99,8 +104,9 @@ class RealmManager {
         self.questions.filter("isAsked == %@ AND NOT tag IN %@", false, self.storedTagStringArray)
     }
     /// 가능한 질문 중, 랜덤 질문 하나
-    var randomAvailableQuestion: RealmQuestion {
+    var randomAvailableQuestion: RealmQuestion? {
         let questions = Array(self.availableQuestions)
+        if questions.isEmpty { return nil }
         return questions[Int.random(in: 0..<questions.count)]
     }
     /// 앱 실행 > 새 버전이 있을 시 질문 업데이트 (새 질문들로 초기화)
@@ -114,28 +120,36 @@ class RealmManager {
             print("[Failed] 새로운 버전의 질문들로 초기화에 실패하였습니다. : \(error)")
         }
     }
-    /// 질문 종료 > 이미 응답한 질문의 isAsked 필드를 false로 업데이트
-    func updateAskedQuestions(asked status: Bool = false) throws {
+    /// 질문 종료 > 이미 응답한 질문의 isAsked, isAnswered 필드를 false로 업데이트
+    func resetAskedQuestions() throws {
         do {
             try self.realm.write {
-                Array(askedQuestions).forEach { $0.isAsked = status }
+                Array(askedQuestions).forEach {
+                    $0.isAsked = false
+                }
+                Array(answeredQuestions).forEach {
+                    $0.isAnswered = false
+                }
             }
         } catch (let error) {
-            print("[Failed] 모든 질문의 응답상태를 \(status)로 변경하는 것이 실패하였습니다.: \(error)")
+            print("[Failed] 모든 질문의 응답상태를 false로 변경하는 것이 실패하였습니다.: \(error)")
         }
     }
-    /// 질문에 응답 완료 >  isAsked 필드를 true로 업데이트
-    func updateQuestion(asked status: Bool = true, questionId: Int) throws {
+    /// 질문 노출 >  isAsked 필드를 true로 업데이트 /
+    /// 질문 응답 >  isAnswered 필드를 true로 업데이트 /
+    /// 건너뛰기 >  isAnswered 필드를 false로 업데이트
+    func updateQuestion(_ questionId: Int, asked: Bool = true, answered: Bool = true) throws {
         guard let question = self.questions.filter("id == \(questionId)").first else {
             print("[Not Exist] id가 \(questionId)인 질문이 존재하지 않습니다.")
             return
         }
         do {
             try self.realm.write {
-                question.isAsked = status
+                question.isAsked = asked
+                question.isAnswered = answered
             }
         } catch (let error) {
-            print("[Failed] 질문(id:\(questionId))의 응답상태를 \(status)로 변경하는 것이 실패하였습니다. : \(error)")
+            print("[Failed] 질문(id:\(questionId))의 질문상태를 \(asked)로, 응답상태를 \(answered)로 변경하는 것이 실패하였습니다. : \(error)")
         }
     }
     
