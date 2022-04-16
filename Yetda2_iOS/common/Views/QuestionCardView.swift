@@ -8,7 +8,9 @@
 import UIKit
 
 class QuestionCardView: UIView {
-    let label: UILabel = {
+    private(set) var question: RealmQuestion?
+    
+    private let label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 34)
         label.textAlignment = .center
@@ -63,6 +65,17 @@ class QuestionCardView: UIView {
         self.label.textColor = .white
     }
     
+    private func readyForNextCard() {
+        self.setNormalView()
+        self.alpha = 0
+        self.transform = CGAffineTransform.identity
+    }
+    
+    private func fadeIn() {
+        UIView.animate(withDuration: 0.2) {
+            self.alpha = 1
+        }
+    }
     
     // MARK: - 애니메이션
     /// CardView 좌우 슬라이드 애니메이션  이동거리
@@ -75,21 +88,21 @@ class QuestionCardView: UIView {
     }
     
     /// REJECTED
-    func moveLeft() {
+    func moveLeft(completion: (() -> Void)? = nil) {
         guard let movingDistance = self.movingDistance else {
             return
         }
+        
         self.setRejectedView()
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.transform = CGAffineTransform(translationX: -movingDistance, y: 0)
-        } completion: { [weak self] _ in
-            self?.setNormalView()
-            self?.showNextCard()
+        } completion: { _ in
+            completion?()
         }
     }
     
     /// CONFIRMED
-    func moveRight() {
+    func moveRight(completion: (() -> Void)? = nil) {
         guard let movingDistance = self.movingDistance else {
             return
         }
@@ -97,34 +110,40 @@ class QuestionCardView: UIView {
         self.setConfirmedView()
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.transform = CGAffineTransform(translationX: movingDistance, y: 0)
-        } completion: { [weak self] _ in
-            self?.setNormalView()
-            self?.showNextCard()
+        } completion: { _ in
+            completion?()
         }
     }
     
     /// UNKNOWN
-    func moveUp() {
+    func moveUp(completion: (() -> Void)? = nil) {
         guard let movingDistance = self.movingDistance else {
             return
         }
         
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.transform = CGAffineTransform(translationX: 0, y: -2 * movingDistance)
-        } completion: { [weak self] _ in
-            self?.setNormalView()
-            self?.showNextCard()
+        } completion: { _ in
+            completion?()
         }
     }
     
-    private func showNextCard() {
-        self.alpha = 0
-        self.transform = CGAffineTransform.identity
-        // 새로운 질문 로드
-        UIView.animate(withDuration: 0.2) {
+    func showNextCardIfAvailable(completion: ((Bool) -> Void)? = nil) {
+        // reset view
+        self.readyForNextCard()
+        
+        // load next question
+        self.question = RealmManager.shared.randomAvailableQuestion
+        self.label.text = question?.question
+        
+        guard question != nil else {
             self.alpha = 1
+            completion?(false)
+            return
         }
+        
+        // show
+        self.fadeIn()
+        completion?(true)
     }
 }
-
-

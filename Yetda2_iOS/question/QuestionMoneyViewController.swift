@@ -60,8 +60,7 @@ extension QuestionMoneyViewController: QuestionViewController {
     
     @objc func skipVC() {
         StoredData.resetPrice()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-        goToRecommendViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func storeData() {
@@ -70,19 +69,11 @@ extension QuestionMoneyViewController: QuestionViewController {
     
     @objc func storeDataAndNextVC() {
         self.storeData()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-        goToRecommendViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func checkNextButtonEnable() -> Bool {
         minPrice <= maxPrice
-    }
-    
-    // TODO: 출시를 위한 임시 코드. 해당 코드는 QuestionGenenralViewController에서 선물이 10개 이하로 뽑히면 그 때 호출되어야 한다.
-    func goToRecommendViewController() {
-        let questionStoryboard = UIStoryboard(name: "Recommend", bundle: nil)
-        let recommendVC = questionStoryboard.instantiateViewController(identifier: "RecommendViewController")
-        self.navigationController?.pushViewController(recommendVC, animated: true)
     }
 }
 

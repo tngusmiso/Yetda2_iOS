@@ -117,6 +117,8 @@
                                             <constraint firstAttribute="width" constant="70" id="xIL-Z8-aRN"/>
                                         </constraints>
                                         <state key="normal" image="reject"/>
+                                        <state key="selected" image="reject_select"/>
+                                        <state key="highlighted" image="reject_select"/>
                                         <connections>
                                             <action selector="touchRejectButton:" destination="oU5-Mj-dO6" eventType="touchUpInside" id="bJl-zW-62F"/>
                                         </connections>
@@ -128,6 +130,8 @@
                                             <constraint firstAttribute="width" constant="70" id="ixG-a5-0pg"/>
                                         </constraints>
                                         <state key="normal" image="confirm"/>
+                                        <state key="selected" image="confirm_select"/>
+                                        <state key="highlighted" image="confirm_select"/>
                                         <connections>
                                             <action selector="touchConfirmButton:" destination="oU5-Mj-dO6" eventType="touchUpInside" id="aUk-cZ-vbL"/>
                                         </connections>
@@ -347,7 +351,9 @@
     </scenes>
     <resources>
         <image name="confirm" width="70" height="70"/>
+        <image name="confirm_select" width="70" height="70"/>
         <image name="reject" width="70" height="70"/>
+        <image name="reject_select" width="70" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

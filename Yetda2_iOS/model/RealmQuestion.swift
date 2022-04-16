@@ -13,11 +13,13 @@ import RealmSwift
 /// - var question: String  - 질문 내용
 /// - var tag: String           - 해당 질문에 대한 태그
 /// - var isAsked: Bool      - 물어본적이 있는가?
+/// - var isAnswered: Bool      - 응답했는가? (건너뛰기 하지 않았는가?)
 class RealmQuestion: Object {
     @objc dynamic var id: Int = 1
     @objc dynamic var question: String = ""
     @objc dynamic var tag: String = ""
     @objc dynamic var isAsked: Bool = false
+    @objc dynamic var isAnswered: Bool = false
     
     init(firestoreQuestion question: FirestoreManager.Question) {
         super.init()
@@ -25,6 +27,7 @@ class RealmQuestion: Object {
         self.question = question.question
         self.tag = question.tag
         self.isAsked = false
+        self.isAnswered = false
     }
     
     required override init() {
