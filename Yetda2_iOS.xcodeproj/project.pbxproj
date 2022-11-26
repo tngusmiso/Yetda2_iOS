@@ -48,6 +48,8 @@
 		3A466B27275919B70085B9B7 /* AnswerResetAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A466B26275919B70085B9B7 /* AnswerResetAlertView.xib */; };
 		3A466B33276382A60085B9B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A466B32276382A60085B9B7 /* GoogleService-Info.plist */; };
 		3A466B3727638A4F0085B9B7 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A466B3627638A4F0085B9B7 /* FirestoreManager.swift */; };
+		3A531D0829329F8C004BCEDC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A531D0729329F8C004BCEDC /* Array+Extension.swift */; };
+		3A58C35C281DC8D600F8378F /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */; };
 		97D136FE5978C4FC08841DB0 /* Pods_Yetda2_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB13B3DB393CD9540FC2C62 /* Pods_Yetda2_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		3A466B26275919B70085B9B7 /* AnswerResetAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerResetAlertView.xib; sourceTree = "<group>"; };
 		3A466B32276382A60085B9B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A466B3627638A4F0085B9B7 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		3A531D0729329F8C004BCEDC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Yetda2_iOS/common/Extensions/Array+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CALayer+Extension.swift"; path = "Yetda2_iOS/common/Extensions/CALayer+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		FAB13B3DB393CD9540FC2C62 /* Pods_Yetda2_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda2_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -216,6 +220,8 @@
 			children = (
 				3A466AEA275913EA0085B9B7 /* UIColor+Additions.swift */,
 				3A214B60276B6CB0000EA7CD /* String+Extension.swift */,
+				3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */,
+				3A531D0729329F8C004BCEDC /* Array+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -402,12 +408,14 @@
 			files = (
 				3A214B5D2767B82B000EA7CD /* StoredData.swift in Sources */,
 				3A214B4B2763D5E7000EA7CD /* RealmTag.swift in Sources */,
+				3A58C35C281DC8D600F8378F /* CALayer+Extension.swift in Sources */,
 				3A466B15275915370085B9B7 /* QuestionViewController.swift in Sources */,
 				3A466ACA2759123B0085B9B7 /* RealmGift.swift in Sources */,
 				3A466AE2275913A80085B9B7 /* RealmQuestion.swift in Sources */,
 				3A466B0F275915250085B9B7 /* QuestionMoneyViewController.swift in Sources */,
 				3A214B61276B6CB0000EA7CD /* String+Extension.swift in Sources */,
 				3A466AE5275913B60085B9B7 /* RealmUpdate.swift in Sources */,
+				3A531D0829329F8C004BCEDC /* Array+Extension.swift in Sources */,
 				3A214B482763B4E7000EA7CD /* RealmManager.swift in Sources */,
 				3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */,
 				3A466B23275919AC0085B9B7 /* AnswerResetAlertView.swift in Sources */,

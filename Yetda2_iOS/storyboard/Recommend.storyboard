@@ -16,32 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천선물" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeF-fQ-4TC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="추천선물" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeF-fQ-4TC">
                                 <rect key="frame" x="38" y="150" width="338" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-nA-2Kj" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
-                                <rect key="frame" x="38" y="194" width="338" height="405"/>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-nA-2Kj" customClass="QuestionCardView" customModule="Yetda2_iOS" customModuleProvider="target">
+                                <rect key="frame" x="38" y="194" width="338" height="476"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="O07-Lu-y37">
-                                        <rect key="frame" x="33" y="40" width="272" height="214"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="O07-Lu-y37">
+                                        <rect key="frame" x="33" y="40" width="272" height="285"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마카롱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aY-fU-yMJ">
-                                        <rect key="frame" x="33" y="287" width="272" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="마카롱" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aY-fU-yMJ">
+                                        <rect key="frame" x="33" y="358" width="272" height="36"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="완전 취향저격 선물일거에요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMe-rN-IYE">
-                                        <rect key="frame" x="33" y="341" width="272" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="완전 취향저격 선물일거에요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMe-rN-IYE">
+                                        <rect key="frame" x="33" y="412" width="272" height="22"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="18"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="pMe-rN-IYE" firstAttribute="leading" secondItem="cXc-nA-2Kj" secondAttribute="leading" constant="33" id="B9E-1K-Bit"/>
                                     <constraint firstItem="9aY-fU-yMJ" firstAttribute="top" secondItem="O07-Lu-y37" secondAttribute="bottom" constant="33" id="E3z-6z-s6E"/>
@@ -55,16 +55,33 @@
                                     <constraint firstItem="O07-Lu-y37" firstAttribute="leading" secondItem="cXc-nA-2Kj" secondAttribute="leading" constant="33" id="w8s-I4-dNa"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-am-dTY">
-                                <rect key="frame" x="160" y="643" width="94" height="30"/>
-                                <state key="normal" title="또 다른 선물은?"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-7L-kjQ" customClass="HorizontalRoundButton" customModule="Yetda2_iOS" customModuleProvider="target">
                                 <rect key="frame" x="28" y="778" width="358" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="wK2-XT-PTJ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="처음으로 돌아가기"/>
+                                <connections>
+                                    <action selector="goToHomeVC:" destination="Dji-KW-Ikq" eventType="touchUpInside" id="vF0-4z-NpJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-am-dTY">
+                                <rect key="frame" x="145" y="714" width="124" height="36"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="또 다른 선물은?">
+                                            <attributes>
+                                                <color key="NSColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="20" name="AppleSDGothicNeo-Medium"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="touchAnotherGiftButton:" destination="Dji-KW-Ikq" eventType="touchUpInside" id="IZi-uA-ZfC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jNj-63-Ndk"/>
@@ -73,21 +90,21 @@
                             <constraint firstItem="UeF-fQ-4TC" firstAttribute="leading" secondItem="jNj-63-Ndk" secondAttribute="leading" constant="38" id="1d5-FI-VPb"/>
                             <constraint firstItem="cXc-nA-2Kj" firstAttribute="leading" secondItem="jNj-63-Ndk" secondAttribute="leading" constant="38" id="Gvp-Bw-fjU"/>
                             <constraint firstItem="cXc-nA-2Kj" firstAttribute="top" secondItem="UeF-fQ-4TC" secondAttribute="bottom" constant="20" id="JxG-Z4-UN4"/>
-                            <constraint firstItem="Fg0-7L-kjQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="cXc-nA-2Kj" secondAttribute="bottom" constant="179" id="K5c-Ms-HGV"/>
                             <constraint firstItem="UeF-fQ-4TC" firstAttribute="top" secondItem="jNj-63-Ndk" secondAttribute="top" constant="106" id="NdO-Gb-Z4j"/>
                             <constraint firstItem="jNj-63-Ndk" firstAttribute="bottom" secondItem="Fg0-7L-kjQ" secondAttribute="bottom" constant="32" id="Pmr-Zh-MO9"/>
                             <constraint firstItem="Fg0-7L-kjQ" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="RTR-I9-6Es"/>
                             <constraint firstItem="cXc-nA-2Kj" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="atA-V2-0yB"/>
                             <constraint firstItem="z1b-am-dTY" firstAttribute="top" secondItem="cXc-nA-2Kj" secondAttribute="bottom" constant="44" id="bYf-0H-r12"/>
+                            <constraint firstItem="Fg0-7L-kjQ" firstAttribute="top" secondItem="z1b-am-dTY" secondAttribute="bottom" constant="28" id="iEr-b8-4BO"/>
                             <constraint firstItem="z1b-am-dTY" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="kon-OA-sYC"/>
                             <constraint firstItem="UeF-fQ-4TC" firstAttribute="centerX" secondItem="jNj-63-Ndk" secondAttribute="centerX" id="liN-Ok-5cY"/>
                             <constraint firstItem="Fg0-7L-kjQ" firstAttribute="leading" secondItem="jNj-63-Ndk" secondAttribute="leading" constant="28" id="ylj-VS-TUH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="anotherGiftButton" destination="z1b-am-dTY" id="Yj0-eO-31v"/>
+                        <outlet property="anotherGiftButton" destination="z1b-am-dTY" id="1ae-Mh-fTY"/>
                         <outlet property="descriptionLabel" destination="pMe-rN-IYE" id="5tc-c6-ox5"/>
-                        <outlet property="giftImage" destination="O07-Lu-y37" id="1Fp-Sb-rpV"/>
+                        <outlet property="giftImageView" destination="O07-Lu-y37" id="Sgz-rQ-Ch2"/>
                         <outlet property="giftNameLabel" destination="9aY-fU-yMJ" id="yGN-eI-nTh"/>
                         <outlet property="homeButton" destination="Fg0-7L-kjQ" id="H6w-ft-dSH"/>
                         <outlet property="titleLabel" destination="UeF-fQ-4TC" id="2bO-EF-VSb"/>
@@ -99,7 +116,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="giftPlaceholder" width="200" height="214"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

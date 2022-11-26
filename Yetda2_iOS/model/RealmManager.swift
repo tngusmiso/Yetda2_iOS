@@ -105,9 +105,8 @@ class RealmManager {
     }
     /// 가능한 질문 중, 랜덤 질문 하나
     var randomAvailableQuestion: RealmQuestion? {
-        let questions = Array(self.availableQuestions)
-        if questions.isEmpty { return nil }
-        return questions[Int.random(in: 0..<questions.count)]
+        let questions = Array(self.availableQuestions).shuffled()
+        return questions.first
     }
     /// 앱 실행 > 새 버전이 있을 시 질문 업데이트 (새 질문들로 초기화)
     func resetQuestions(_ newQuestions: [RealmQuestion]) throws {

@@ -32,10 +32,7 @@ class QuestionCardView: UIView {
     private func setupLayout() {
         // cardview appearances
         self.layer.cornerRadius = 14
-        self.layer.shadowRadius = 20
-        self.layer.shadowOpacity = 0.1
-        self.layer.shadowOffset = CGSize(width: 0, height: 4)
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+        self.layer.makeShadow(color: .black, alpha: 0.05, x: 0, y: 3, blur: 20, spread: 0)
         
         // label constraints
         self.addSubview(label)
