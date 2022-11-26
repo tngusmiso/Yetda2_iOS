@@ -17,6 +17,7 @@ class RecommendViewController: UIViewController {
     @IBOutlet weak var anotherGiftButton: UIButton!
     @IBOutlet weak var homeButton: HorizontalRoundButton!
     @IBOutlet weak var descriptionLabel: UILabel!
+    private let animationView: UIImageView = UIImageView()
     
     private var gifts: [RealmGift] = []
     private var giftIndex: Int = 0
@@ -30,12 +31,9 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         
-        self.titleLabel.text = Strings.recommendTitle
-        
+        self.setupUI()
         self.gifts = RealmManager.shared.recommendedGifts.shuffled()
         self.showRecommendResult()
-        
-        self.homeButton.text = Strings.home
     }
 
     @IBAction func touchAnotherGiftButton(_ sender: Any) {
@@ -46,10 +44,24 @@ class RecommendViewController: UIViewController {
         self.navigationController?.dismiss(animated: true)
     }
     
+    private func setupUI() {
+        self.titleLabel.text = Strings.recommendTitle
+        self.homeButton.text = Strings.home
+        
+        self.view.addSubview(self.animationView)
+        self.animationView.frame = self.view.frame
+        self.animationView.setGifImage(name: "pung")
+    }
+    
     private func showRecommendResult() {
         guard gifts.isEmpty == false else {
-            self.setEmptyRecommendStatus()
+            self.showEmptyRecommendStatus()
             return
+        }
+        
+        if animationView.isAnimating == false {
+            self.animationView.animationRepeatCount = 1
+            self.animationView.startAnimating()
         }
         
         if self.giftIndex >= gifts.count {
@@ -59,19 +71,19 @@ class RecommendViewController: UIViewController {
         
         let gift = gifts[self.giftIndex]
         self.giftName = gift.name
-        self.setImage(stringURL: gift.image)
+        self.setGiftImage(url: gift.image)
         self.giftIndex += 1
     }
     
-    private func setEmptyRecommendStatus() {
+    private func showEmptyRecommendStatus() {
         self.giftName = ""
         self.giftImageView.image = self.giftImagePlaceholder
         self.descriptionLabel.text = "추천할 수 있는 선물이 없습니다."
         self.anotherGiftButton.isHidden = true
     }
     
-    private func setImage(stringURL: String) {
-        let imageURL = URL(string: stringURL)
+    private func setGiftImage(url: String) {
+        let imageURL = URL(string: url)
         self.giftImageView.kf.setImage(
             with: imageURL,
             placeholder: self.giftImagePlaceholder

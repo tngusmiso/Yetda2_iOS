@@ -52,6 +52,8 @@
 		3A531D0E2932A251004BCEDC /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A531D0C2932A251004BCEDC /* result.json */; };
 		3A531D0F2932A251004BCEDC /* result_repeat.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A531D0D2932A251004BCEDC /* result_repeat.json */; };
 		3A531D132932A3BA004BCEDC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3A531D122932A3BA004BCEDC /* Lottie */; };
+		3A531D182932AC89004BCEDC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A531D172932AC89004BCEDC /* UIImageView+Extension.swift */; };
+		3A531D1B2932AECE004BCEDC /* pung.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3A531D1A2932AECE004BCEDC /* pung.gif */; };
 		3A58C35C281DC8D600F8378F /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */; };
 		97D136FE5978C4FC08841DB0 /* Pods_Yetda2_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB13B3DB393CD9540FC2C62 /* Pods_Yetda2_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +99,8 @@
 		3A531D0729329F8C004BCEDC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Yetda2_iOS/common/Extensions/Array+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		3A531D0C2932A251004BCEDC /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
 		3A531D0D2932A251004BCEDC /* result_repeat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result_repeat.json; sourceTree = "<group>"; };
+		3A531D172932AC89004BCEDC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "Yetda2_iOS/common/Extensions/UIImageView+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		3A531D1A2932AECE004BCEDC /* pung.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pung.gif; sourceTree = "<group>"; };
 		3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CALayer+Extension.swift"; path = "Yetda2_iOS/common/Extensions/CALayer+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		FAB13B3DB393CD9540FC2C62 /* Pods_Yetda2_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yetda2_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -229,6 +233,7 @@
 				3A214B60276B6CB0000EA7CD /* String+Extension.swift */,
 				3A58C35B281DC8D600F8378F /* CALayer+Extension.swift */,
 				3A531D0729329F8C004BCEDC /* Array+Extension.swift */,
+				3A531D172932AC89004BCEDC /* UIImageView+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		3A531D0B2932A217004BCEDC /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A531D1A2932AECE004BCEDC /* pung.gif */,
 				3A531D0D2932A251004BCEDC /* result_repeat.json */,
 				3A531D0C2932A251004BCEDC /* result.json */,
 			);
@@ -367,6 +373,7 @@
 			files = (
 				3A466AB72759116F0085B9B7 /* LaunchScreen.storyboard in Resources */,
 				3A466B27275919B70085B9B7 /* AnswerResetAlertView.xib in Resources */,
+				3A531D1B2932AECE004BCEDC /* pung.gif in Resources */,
 				3A531D0E2932A251004BCEDC /* result.json in Resources */,
 				3A466B1F275915D30085B9B7 /* Recommend.storyboard in Resources */,
 				3A466AB42759116F0085B9B7 /* Assets.xcassets in Resources */,
@@ -440,6 +447,7 @@
 				3A466AAB2759116D0085B9B7 /* AppDelegate.swift in Sources */,
 				3A466B23275919AC0085B9B7 /* AnswerResetAlertView.swift in Sources */,
 				3A466AF8275914520085B9B7 /* QuestionCardView.swift in Sources */,
+				3A531D182932AC89004BCEDC /* UIImageView+Extension.swift in Sources */,
 				3A466AF2275914320085B9B7 /* HorizontalRoundButton.swift in Sources */,
 				3A466AFF2759149E0085B9B7 /* RoundSelectGroup.swift in Sources */,
 				3A466B18275915840085B9B7 /* RecommendViewController.swift in Sources */,
