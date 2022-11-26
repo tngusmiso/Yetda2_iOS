@@ -5,6 +5,7 @@
 //  Created by 임수현 on 2021/09/25.
 //
 
+import Lottie
 import UIKit
 
 class QuestionGeneralViewController: UIViewController {
@@ -15,6 +16,9 @@ class QuestionGeneralViewController: UIViewController {
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var unknownButton: UIButton!
+    private let dimmedView: UIView = .init()
+    private let resultLottie: LottieAnimationView = .init(name: "result")
+    private let resultRepeatLottie: LottieAnimationView = .init(name: "result_repeat")
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -36,9 +40,28 @@ class QuestionGeneralViewController: UIViewController {
             if success {
                 self?.setButtonsEnabled(true)
             } else {
-                self?.goToRecommendViewController()
+                self?.showResultAnimation()
             }
         }
+        
+        self.view.addSubview(self.dimmedView)
+        self.dimmedView.frame = self.view.bounds
+        self.dimmedView.backgroundColor = .black
+        self.dimmedView.alpha = 0
+        self.dimmedView.isHidden = true
+        
+        self.view.addSubview(self.resultLottie)
+        self.resultLottie.frame = self.view.bounds
+        self.resultLottie.contentMode = .scaleAspectFit
+        self.resultLottie.isHidden = true
+        
+        self.view.addSubview(self.resultRepeatLottie)
+        self.resultRepeatLottie.frame = self.view.bounds
+        self.resultRepeatLottie.contentMode = .scaleAspectFit
+        self.resultRepeatLottie.isHidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.goToRecommendViewController))
+        self.resultRepeatLottie.addGestureRecognizer(tapGesture)
     }
     
     private func setButtonsEnabled(_ enabled: Bool) {
@@ -59,7 +82,7 @@ class QuestionGeneralViewController: UIViewController {
             if strongSelf.needsMoreQuestion() {
                 strongSelf.currentCardView.showNextCardIfAvailable(completion: strongSelf.didLoadNextQuestion)
             } else {
-                strongSelf.goToRecommendViewController()
+                strongSelf.showResultAnimation()
             }
         }
     }
@@ -74,7 +97,7 @@ class QuestionGeneralViewController: UIViewController {
             if strongSelf.needsMoreQuestion() {
                 strongSelf.currentCardView.showNextCardIfAvailable(completion: strongSelf.didLoadNextQuestion)
             } else {
-                strongSelf.goToRecommendViewController()
+                strongSelf.showResultAnimation()
             }
         }
     }
@@ -89,7 +112,7 @@ class QuestionGeneralViewController: UIViewController {
             if strongSelf.needsMoreQuestion() {
                 strongSelf.currentCardView.showNextCardIfAvailable(completion: strongSelf.didLoadNextQuestion)
             } else {
-                strongSelf.goToRecommendViewController()
+                strongSelf.showResultAnimation()
             }
         }
     }
@@ -98,7 +121,24 @@ class QuestionGeneralViewController: UIViewController {
         if success {
             self.setButtonsEnabled(true)
         } else {
-            self.goToRecommendViewController()
+            self.showResultAnimation()
+        }
+    }
+    
+    private func showResultAnimation() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem()
+        
+        self.dimmedView.isHidden = false
+        UIView.animate(withDuration: 1) { [weak self] in
+            self?.dimmedView.alpha = 0.5
+        }
+        
+        self.resultLottie.isHidden = false
+        self.resultLottie.play() { [weak self] _ in
+            self?.resultLottie.isHidden = true
+            self?.resultRepeatLottie.isHidden = false
+            self?.resultRepeatLottie.loopMode = .loop
+            self?.resultRepeatLottie.play()
         }
     }
     
@@ -108,7 +148,7 @@ class QuestionGeneralViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    private func goToRecommendViewController() {
+    @objc private func goToRecommendViewController() {
         self.resetAskedQuestion()
         
         let questionStoryboard = UIStoryboard(name: "Recommend", bundle: nil)
