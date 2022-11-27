@@ -79,42 +79,36 @@ extension QuestionMoneyViewController: QuestionViewController {
 
 extension QuestionMoneyViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        switch textField {
-        case self.minPriceTextField:
-            if minPrice > maxPrice {
-                self.minPriceTextField.text = "\(maxPrice)"
-            }
-        case self.maxPriceTextField:
-            if minPrice > maxPrice {
-                self.maxPriceTextField.text = "\(minPrice)"
-            }
-        default:
-            break
-        }
         self.nextButton.isEnabled = checkNextButtonEnable()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         textField.invalidateIntrinsicContentSize()
         
-        // backspace
-        if string.isEmpty {
-            return true
-        }
-        
         guard let text = textField.text,
               let textRange = Range(range, in: text) else {
             return false
         }
+        
         let newText = text.replacingCharacters(in: textRange, with: string)
         guard let intValue = Int(newText) else {
-            return false
-        }
-        if intValue > 5000 {
-            textField.text = "5000"
+            // backspace
+            if string.isEmpty {
+                textField.text = newText
+            }
+            self.nextButton.isEnabled = self.checkNextButtonEnable()
             return false
         }
         
-        return true
+        if intValue <= 0 {
+            textField.text = "0"
+        } else if intValue > 5000 {
+            textField.text = "5000"
+        } else {
+            textField.text = String(format: "%d", intValue)
+        }
+        
+        self.nextButton.isEnabled = self.checkNextButtonEnable()
+        return false
     }
 }
