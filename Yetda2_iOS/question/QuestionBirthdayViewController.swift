@@ -59,7 +59,6 @@ class QuestionBirthdayViewController: UIViewController {
 }
 
 extension QuestionBirthdayViewController: QuestionViewController {
-    
     @objc func quitQuestionVC() {
         // 팝업
         StoredData.resetSeasonTagAndReverse(nil)
@@ -76,63 +75,62 @@ extension QuestionBirthdayViewController: QuestionViewController {
     }
     
     @objc func storeDataAndNextVC() {
+        // 버튼 활성화 상태 한번 더 체크
+        guard self.checkNextButtonEnable() else {
+            return
+        }
         self.storeData()
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func checkNextButtonEnable() -> Bool {
-        self.month.isEmpty == false && self.date.isEmpty == false
+        guard let month = Int(self.month), let date = Int(self.date) else {
+            return false
+        }
+        if month < 1 || date < 1 {
+            return false
+        }
+        if month > 12 || date > maxDate(of: month) ?? 0 {
+            return false
+        }
+        return true
     }
 }
 
 extension QuestionBirthdayViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text else {
+        guard let text = textField.text, let intValue = Int(text) else {
+            self.nextButton.isEnabled = false
             return
         }
         
-        // 최소값 판별
-        guard let intValue = Int(text) else {
-            self.nextButton.isEnabled = checkNextButtonEnable()
-            return
-        }
-        if intValue < 1 { textField.text = "" }
-        else { textField.text = String(format: "%02d", intValue)}
-        
-        // 최대값 판별
-        if let month = Int(self.month), month > 12 {
-            self.monthTextField.text = "12"
-        }
-        if let date = Int(self.date) {
-            self.setDateTextFieldMaxIfNeed(from: date)
-        }
+        textField.text = String(format: "%02d", intValue)
         
         // 다음버튼 활성화
         self.nextButton.isEnabled = checkNextButtonEnable()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // backspace
-        if string.isEmpty { return true }
-        
         // 숫자 외에는 입력 불가
         guard let text = textField.text,
-              let textRange = Range(range, in: text),
-              var newValue = Int(text.replacingCharacters(in: textRange, with: string)) else {
+              let textRange = Range(range, in: text) else {
             return false
         }
         
-        if newValue == 0 { return true }
-        
-        switch textField {
-        case self.monthTextField:
-            if newValue >= 12 { newValue = 12 }
-            textField.text = String(format: "%02d", newValue)
-        case self.dateTextField:
-            setDateTextFieldMaxIfNeed(from: newValue)
-        default:
-            break
+        // 숫자 외에는 입력 불가
+        guard let newValue = Int(text.replacingCharacters(in: textRange, with: string)) else {
+            // backspace 예외
+            if string.isEmpty {
+                textField.text = text.replacingCharacters(in: textRange, with: string)
+            }
+            self.nextButton.isEnabled = checkNextButtonEnable()
+            return false
         }
+        
+        if newValue > 99 { return false }
+        
+        textField.text = String(format: "%d", newValue)
+        self.nextButton.isEnabled = checkNextButtonEnable()
         
         return false
     }
